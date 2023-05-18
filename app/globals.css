@@ -1,3 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateX(-0.5px);
+        transform: translateY(0.5px);
+    }
+
+    20% {
+        transform: translateX(0.5px);
+        transform: translateY(-0.5px);
+    }
+
+    30% {
+        transform: translateY(0.5px);
+        transform: translateX(-0.5px);
+    }
+
+    40% {
+        transform: translateX(0.5px);
+        transform: translateY(-0.5px);
+    }
+
+    50% {
+        transform: translateY(0.5px);
+        transform: translateX(-0.5px);
+    }
+
+    60% {
+        transform: translateX(0.5px);
+        transform: translateY(-0.5px);
+    }
+
+    70% {
+        transform: translateX(-0.5px);
+        transform: translateY(0.5px);
+    }
+
+    80% {
+        transform: translateX(0.5px);
+        transform: translateY(-0.5px);
+    }
+
+    90% {
+        transform: translateX(-0.5px);
+        transform: translateY(0.5px);
+    }
+
+    100% {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes rot-grad-heading {
+    0% {
+        background-image: linear-gradient(45deg, hsl(160deg, 3%, 41%) 25%, #97a69d 50%, hsl(16deg, 24%, 49%) 100%);
+    }
+    10% {
+        background-image: linear-gradient(50deg, hsl(160deg, 3%, 42%) 25%, #97a69d 50%, hsl(16deg, 25%, 48%) 100%);
+    }
+    20% {
+        background-image: linear-gradient(55deg, hsl(160deg, 3%, 43%) 25%, #97a69d 50%, hsl(16deg, 24%, 47%) 100%);
+    }
+    30% {
+        background-image: linear-gradient(60deg, hsl(160deg, 3%, 44%) 25%, #97a69d 50%, hsl(16deg, 24%, 46%) 100%);
+    }
+    40% {
+        background-image: linear-gradient(65deg, hsl(160deg, 3%, 45%) 25%, #97a69d 50%, hsl(16deg, 24%, 45%) 100%);
+    }
+    50% {
+        background-image: linear-gradient(70deg, hsl(160deg, 3%, 46%) 25%, #97a69d 50%, hsl(16deg, 24%, 44%) 100%);
+    }
+    60% {
+        background-image: linear-gradient(65deg, hsl(160deg, 3%, 45%) 25%, #97a69d 50%, hsl(16deg, 24%, 45%) 100%);
+    }
+    70% {
+        background-image: linear-gradient(60deg, hsl(160deg, 3%, 44%) 25%, #97a69d 50%, hsl(16deg, 24%, 46%) 100%);
+    }
+    80% {
+        background-image: linear-gradient(55deg, hsl(160deg, 3%, 43%) 25%, #97a69d 50%, hsl(16deg, 24%, 47%) 100%);
+    }
+    90% {
+        background-image: linear-gradient(50deg, hsl(160deg, 3%, 42%) 25%, #97a69d 50%, hsl(16deg, 24%, 48%) 100%);
+    }
+    100% {
+        background-image: linear-gradient(45deg, hsl(160deg, 3%, 41%) 25%, #97a69d 50%, hsl(16deg, 24%, 49%) 100%);
+    }
+}
+
+
+.r-gradient-heading {
+    animation: rot-grad-heading 1s infinite;
+}
+
+.r-gradient-heading {
+    animation: rot-grad-heading 0.5s infinite;
+}
+
+.animate-shake {
+    animation: shake 0.5s infinite;
+}
+
+@media (hover: hover) {
+    .hover\:animate-shake:hover {
+        animation: shake 0.5s infinite;
+    }
+}
+
+@media (hover: hover) {
+    .hover\:r-gradient-heading {
+        animation: rot-grad-heading 2.5s infinite;
+    }
+}

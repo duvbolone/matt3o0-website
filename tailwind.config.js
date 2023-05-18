@@ -8,7 +8,16 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'm27v1': '#ddd',
+                'm27v1': {
+                    100: '#fff',
+                    200: '#eee',
+                    DEFAULT:'#ddd',
+                    300: '#ddd',
+                    400: '#ccc',
+                    500: '#bbb',
+                    600: '#aa',
+
+                },
                 'm27v2': '#050505',
                 'm27v3': {
                     50: 'hsl(144deg, 12%, 87%)',
@@ -55,7 +64,8 @@ module.exports = {
             backgroundImage: {
                 'codesample1': 'url("/projects/xpdrefjson/code_sample.png")'
             }
-        }
+        },
+        safeList: ["hover:animate-shake"]
     },
     plugins: [],
     variants: {
