@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 
 export const metadata = {
     title: 'Home - Matt3o0‘s website',
@@ -19,21 +20,21 @@ export default function Home() {
                             <h1 className="text-lg text-slate-700 dark:text-slate-400">About Me</h1>
                             <p className="text-slate-600 text-sm">Check out what kind of weird human being I am.</p>
                         </div>
-                        <Link href="/about"><button className={linkButtonClass}><img src="/icons/arrow_outward.svg" className="h-5"></img>About</button></Link>
+                        <Link href="/about"><button className={linkButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>About</button></Link>
                     </div>
                     <div className={cardClass}>
                         <div>
                             <h1 className="text-lg text-slate-700 dark:text-slate-400">My Projects</h1>
                             <p className="text-slate-600 text-sm">Take a look at what I have made, or I am making.</p>
                         </div>
-                        <Link href="/projects"><button className={linkButtonClass}><img src="/icons/arrow_outward.svg" className="h-5"></img>Projects</button></Link>
+                        <Link href="/projects"><button className={linkButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>Projects</button></Link>
                     </div>
                     <div className={cardClass}>
                         <div>
                             <h1 className="text-lg text-slate-700 dark:text-slate-400">Website Source Code</h1>
                             <p className="text-slate-600 text-sm">The source code of this website, if you're interested in bad code.</p>
                         </div>
-                        <Link href="https://github.com/duvbolone/duvbolone.github.io"><button className={linkButtonClass}><img src="/icons/arrow_outward.svg" className="h-5"></img>Source Code</button></Link>
+                        <Link href="https://github.com/duvbolone/duvbolone.github.io"><button className={linkButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>Source Code</button></Link>
                     </div>
                 </div>
             </div>

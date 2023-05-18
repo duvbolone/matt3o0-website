@@ -1,6 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'media.discordapp.net',
+                port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cdn.discordapp.com',
+                port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 't1.gstatic.com',
+                port: '',
+            },
+        ],
+    },
 }
 
 module.exports = nextConfig

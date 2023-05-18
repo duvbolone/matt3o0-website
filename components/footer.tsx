@@ -19,7 +19,7 @@ export default function Footer() {
             </ul>
             <div className="flex">
                 <p className="max-w-lg text-xs text-neutral-500 dark:text-neutral-800 self-end">
-                    © 2023 Matt3o0. This website's source code is licensed under the <strong><Link href="https://mit-license.org/">MIT License</Link></strong>.
+                    © 2023 Matt3o0. This website's source code is licensed under the <strong><a href="https://mit-license.org/" target="_blank">MIT License</a></strong>.
                 </p>
             </div>
         </footer>
