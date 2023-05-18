@@ -10,7 +10,7 @@ const cardClass = "transition ease-in-out duration-500 w-11/12 lg:w-auto p-3 spa
 const cardHeaderClass = "text-lg text-m27v3-400";
 const cardPgClass = "text-m27v1 text-sm";
 
-const linkButtonClass = "flex space-x-3 p-2 text-m27v3-400 rounded-full bg-transparent border border-m27v3-400 dark:border-m27v3-400 border-2 text-sm hover:bg-m27v3-900 hover:border-m27v3-900 hover:text-m27v1 active:bg-m27v3-800 active:border-m27v3-800";
+const linkButtonClass = "flex space-x-3 p-2 text-m27v3-400 rounded-full bg-transparent hover:border hover:border-m27v3-400 dark:border-m27v3-400 hover:border-2 text-sm hover:border-m27v3-900 hover:text-m27v1 active:bg-m27v3-900 active:border-m27v3-900";
 
 export default function Home() {
     return (

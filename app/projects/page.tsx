@@ -94,9 +94,6 @@ export default function Projects() {
                         <p className="py-4 max-w-2xl">
                             PS: You can find more information about it <Link href="/about#website"><strong>here</strong></Link>
                         </p>
-                        <div className="flex flex-col place-items-center">
-                            <Image src="/projects/website/home.png"  width="1920" height="1080" alt="Home Image" className={showcaseImageClass}/>
-                        </div>
                         <div className="py-5 flex space-x-2">
                             <a href="https://github.com/duvbolone/matt3o0-website" target="_blank">
                                 <button className={linkButtonClass} title="GitHub repository" type="button">
