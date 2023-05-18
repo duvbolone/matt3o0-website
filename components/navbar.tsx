@@ -2,11 +2,12 @@ import { robotoMono } from "@/app/layout"
 import Link from "next/link"
 import Image from "next/image";
 
+const linkButtonClass = "transition duration-10 delay-100 p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v2 active:bg-m27v4 active:scale-90";
+
 export default function NavBar() {
-    const linkButtonClass = "p-2 rounded-full bg-m27v4 text-white dark:hover:text-white hover:bg-m27v2 active:bg-m27v4";
     return (
-        <nav className={robotoMono.className + " flex p-6 sticky top-0 backdrop-blur-[2px] z-50"}>
-            <Link href="/" className="space-x-2 flex">
+        <nav className={robotoMono.className + " flex p-6 sticky top-0 backdrop-blur-[4px] z-50"}>
+            <Link href="/" className="p-3 rounded-full space-x-2 flex hover:animate-shake active:bg-neutral-900/25">
                 <Image src="/M27.png" alt="M27 - The Dumbbell Nebula" width="64" height="64" className="h-14 w-14 rounded-full"></Image>
                 <h1 className="py-2 text-4xl text-m27v2 dark:text-m27v3">Matt3o0</h1>
             </Link>
