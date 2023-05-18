@@ -7,6 +7,11 @@ const showcaseVideoClass = "scale-gpu transition ease-in-out duration-200 rounde
 const showcaseImageCodeClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl w-[110%] lg:w-[70%] lg:h-[100%] hover:scale-105";
 const linkButtonClass = "p-2 rounded-full bg-m27v4 text-white dark:hover:text-white hover:bg-m27v5-900 active:bg-m27v5-800";
 
+export const metadata = {
+    title: 'Projects - Matt3o0‘s website',
+    description: 'This website tells you a bit more about Matt3o0.',
+}
+
 export default function Projects() {
     return (
         <main id="top" className="p-10 grid place-items-center">
@@ -93,7 +98,7 @@ export default function Projects() {
                             <Image src="/projects/website/home.png"  width="1920" height="1080" alt="Home Image" className={showcaseImageClass}/>
                         </div>
                         <div className="py-5 flex space-x-2">
-                            <a href="https://github.com/duvbolone/X-Plane-DatarefJSON" target="_blank">
+                            <a href="https://github.com/duvbolone/matt3o0-website" target="_blank">
                                 <button className={linkButtonClass} title="GitHub repository" type="button">
                                     <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8"/>
                                 </button>

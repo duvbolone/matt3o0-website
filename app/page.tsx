@@ -34,7 +34,7 @@ export default function Home() {
                             <h1 className="text-lg text-slate-700 dark:text-slate-400">Website Source Code</h1>
                             <p className="text-slate-600 text-sm">The source code of this website, if you're interested in bad code.</p>
                         </div>
-                        <Link href="https://github.com/duvbolone/duvbolone.github.io"><button className={linkButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>Source Code</button></Link>
+                        <Link href="https://github.com/duvbolone/matt3o0-website"><button className={linkButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>Source Code</button></Link>
                     </div>
                 </div>
             </div>
