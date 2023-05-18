@@ -16,8 +16,8 @@ function getFavicon(url: string, size: number){
 export default function About() {
     return (
         <main className="p-10 grid place-items-center">
-            <h1 className="p-3 text-6xl text-black dark:text-white text-center">About</h1>
-            <h2 className="p-3 text-4xl text-black dark:text-white text-center">Quick Information</h2>
+            <h1 className="p-3 text-6xl text-black dark:text-m27v1 text-center">About</h1>
+            <h2 className="p-3 text-4xl text-black dark:text-m27v1 text-center">Quick Information</h2>
             <div className={infoBoxClass}>
                 <p className="flex">
                     My time: <iframe title="Time in Brussels (CE(S)T Time Zone)" className="relative top-1" src="https://free.timeanddate.com/clock/i8uraeqx/n48/tlbe/fn6/fs18/fc94a3b8/tct/pct/ftb/ta1" height="18" width="130" allowTransparency={true}></iframe>
@@ -26,7 +26,7 @@ export default function About() {
                     My birthday: <strong className="text-slate-400">20th of May</strong>
                 </p>
             </div>
-            <h2 className="p-3 text-4xl text-black dark:text-white text-center">Biography</h2>
+            <h2 className="p-3 text-4xl text-black dark:text-m27v1 text-center">Biography</h2>
             <div className={infoBoxClass}>
                 I live in Belgium, speak English, Dutch, Italian(I'm half Italian) and a bit of French.
                 When I game it's usually X-Plane, Minecraft, ETS2 or Universe Sandbox.
@@ -41,7 +41,7 @@ export default function About() {
 
                 More on the 'Everything computers' part: I like coding, and use Python, C++ and JavaScript. Lua is a prominent contributor to my coding time too.
             </div>
-            <h2 id="website" className="p-3 text-4xl text-black dark:text-white text-center">Website Information</h2>
+            <h2 id="website" className="p-3 text-4xl text-black dark:text-m27v1 text-center">Website Information</h2>
             <div className={infoBoxClass}>
                 <p>
                     This website is created using <a href="https://nextjs.org/" target="_blank">

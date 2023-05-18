@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image";
 
 export default function NavBar() {
-    const linkButtonClass = "p-2 rounded-full bg-m27v4 text-white dark:hover:text-white hover:bg-m27v2 active:bg-m27v4";
+    const linkButtonClass = "p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v2 active:bg-m27v4";
     return (
         <nav className={robotoMono.className + " flex p-6 sticky top-0 backdrop-blur-[2px] z-50"}>
             <Link href="/" className="space-x-2 flex">

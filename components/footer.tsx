@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Footer() {
     return (
         <footer className="flex flex-col lg:flex-row lg:space-x-40 p-5  bg-m27v3 dark:bg-black align-items-center">
-            <h1 className={robotoMono.className + " py-2 text-4xl text-white"}>Matt3o0</h1>
+            <h1 className={robotoMono.className + " py-2 text-4xl text-m27v1"}>Matt3o0</h1>
             <ul className="text-slate-500">
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Pages</h1>
                 <li><Link href="/">Home</Link></li>

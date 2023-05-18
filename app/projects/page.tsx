@@ -5,7 +5,7 @@ const showcaseImageGridClass = "scale-gpu transition ease-in-out duration-200 ro
 const showcaseImageClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl lg:w-[70%] lg:h-[100%] hover:scale-105 shadow-lg";
 const showcaseVideoClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl w-[95%] h-[170px] lg:w-[30%] lg:h-[280px] hover:scale-105 shadow-lg";
 const showcaseImageCodeClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl w-[110%] lg:w-[70%] lg:h-[100%] hover:scale-105";
-const linkButtonClass = "p-2 rounded-full bg-m27v4 text-white dark:hover:text-white hover:bg-m27v5-900 active:bg-m27v5-800";
+const linkButtonClass = "p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v5-900 active:bg-m27v5-800";
 
 export const metadata = {
     title: 'Projects - Matt3o0‘s website',
@@ -15,7 +15,7 @@ export const metadata = {
 export default function Projects() {
     return (
         <main id="top" className="p-10 grid place-items-center">
-            <h1 className="p-3 text-6xl text-black dark:text-white">Projects</h1>
+            <h1 className="p-3 text-6xl text-black dark:text-m27v1">Projects</h1>
             <ol className="list-disc text-lg lg:text-base">
                 <li><Link href="/projects#clearfly">ClearFly</Link></li>
                 <li><Link href="/projects#xpdrefjson">X-Plane-DatarefJSON</Link></li>
@@ -26,7 +26,7 @@ export default function Projects() {
                 <div id="clearfly" className="grid place-items-center">
                     <div className="flex">
                         <Image src="/projects/clearfly/logo.png" className="h-10 w-10 relative top-2.5" width="128" height="128" alt="ClearFly Logo"></Image>
-                        <h2 className="p-3 text-4xl text-black dark:text-white">ClearFly</h2>
+                        <h2 className="p-3 text-4xl text-black dark:text-m27v1">ClearFly</h2>
                     </div>
                     <div className="flex flex-col place-items-center">
                         <p className="max-w-2xl text-xl lg:text-base">
@@ -67,7 +67,7 @@ export default function Projects() {
                     </div>
                 </div>
                 <div id="xpdrefjson" className="grid place-items-center">
-                    <h2 className="p-3 text-4xl text-black dark:text-white">X-Plane-DatarefJSON</h2>
+                    <h2 className="p-3 text-4xl text-black dark:text-m27v1">X-Plane-DatarefJSON</h2>
                     <div className="flex flex-col place-items-center">
                         <p className="max-w-2xl">
                             X-Plane-DatarefJSON is a simple project that gives you X-Plane datarefs and commands in JSON format,
@@ -86,7 +86,7 @@ export default function Projects() {
                     </div>
                 </div>
                 <div id="my-website" className="grid place-items-center">
-                    <h2 className="p-3 text-4xl text-black dark:text-white">My Website</h2>
+                    <h2 className="p-3 text-4xl text-black dark:text-m27v1">My Website</h2>
                     <div className="flex flex-col place-items-center">
                         <p className="py-4 max-w-2xl">
                             My website is well, a website, that's supposed to tell a little bit more about me and you're browsing it right now. I hope you like it!
@@ -112,7 +112,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-            <Link href="/projects#top"><button title="back-to-top" role="button" className="fixed text-2xl right-10 bottom-20 px-2 py-1 rounded-full text-white bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600">↑</button></Link>
+            <Link href="/projects#top"><button title="back-to-top" role="button" className="fixed text-2xl right-10 bottom-20 px-2 py-1 rounded-full text-m27v1 bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600">↑</button></Link>
         </main>
     )
 }

@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'm27v1': '#ffffff',
+                'm27v1': '#ddd',
                 'm27v2': '#050505',
                 'm27v3': {
                     50: 'hsl(144deg, 12%, 87%)',
@@ -26,11 +26,15 @@ module.exports = {
                 },
                 'm27v4': {
                     DEFAULT: '#414443',
+                    600: 'hsl(160deg, 3%, 41%)',
+                    700: 'hsl(160deg, 2%, 36%)',
                     800: 'hsl(160deg, 1%, 31%)',
                     900: '#414443',
                 },
                 'm27v5': {
                     DEFAULT: '#bd988b',
+                    50: 'hsl(16deg, 30%, 77%)',
+                    100: 'hsl(16deg, 29%, 74%)',
                     200: 'hsl(16deg, 28%, 69%)',
                     300: 'hsl(16deg, 27%, 64%)',
                     400: 'hsl(16deg, 26%, 59%)',
@@ -40,7 +44,6 @@ module.exports = {
                     800: 'hsl(16deg, 22%, 39%)',
                     900: 'hsl(16deg, 21%, 34%)',
                     950: 'hsl(16deg, 20%, 29%)',
-
                 }
             },
             boxShadow: {
