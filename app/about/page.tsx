@@ -20,7 +20,7 @@ export default function About() {
             <h2 className="p-3 text-4xl text-black dark:text-m27v1 text-center">Quick Information</h2>
             <div className={infoBoxClass}>
                 <p className="flex">
-                    My time: <iframe title="Time in Brussels (CE(S)T Time Zone)" className="relative top-1" src="https://free.timeanddate.com/clock/i8uraeqx/n48/tlbe/fn6/fs18/fc94a3b8/tct/pct/ftb/ta1" height="18" width="130" allowTransparency={true}></iframe>
+                    My time: <iframe title="Time in Brussels (CE(S)T Time Zone)" className="relative top-0.5" src="https://free.timeanddate.com/clock/i8uraeqx/n48/tlbe/fn6/fs18/fc94a3b8/tct/pct/ftb/ta1" height="18" width="130" allowTransparency={true}></iframe>
                 </p>
                 <p>
                     My birthday: <strong className="text-slate-400">20th of May</strong>
