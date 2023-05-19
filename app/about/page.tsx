@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-const infoBoxClass = "p-2 shadow-lg border border-m27v3-200 dark:border-slate-900 transition duration-200 hover:dark:bg-neutral-950 hover:shadow-m27v3-200 hover:dark:shadow-neutral-950 hover:shadow-glow-lg transform-gpu rounded-lg text-lg max-w-2xl";
-const faviconPreviews = "h-4 w-4 inline relative bottom-0.5"
+import { infoBoxClass, faviconPreviews, linkClass, h1Class, h2Class } from'@/components/classes';
 
 export const metadata = {
     title: 'About - Matt3o0‘s website',
@@ -13,13 +11,13 @@ function getFavicon(url: string, size: number) {
     return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=${size}`
 }
 
-const linkClass = "no-underline hover:underline";
+
 
 export default function About() {
     return (
         <main className="p-10 grid place-items-center">
-            <h1 className="p-3 text-6xl text-black dark:text-m27v1 text-center">About</h1>
-            <h2 className="p-3 text-4xl text-black dark:text-m27v1 text-center">Quick Information</h2>
+            <h1 className={h1Class}>About</h1>
+            <h2 className={h2Class}>Quick Information</h2>
             <div className={infoBoxClass}>
                 <p className="flex">
                     My time: <iframe title="Time in Brussels (CE(S)T Time Zone)" className="relative top-0.5" src="https://free.timeanddate.com/clock/i8uraeqx/n48/tlbe/fn6/fs18/fc94a3b8/tct/pct/ftb/ta1" height="18" width="130" allowTransparency={true}></iframe>
@@ -28,7 +26,7 @@ export default function About() {
                     My birthday: <strong className="text-slate-400">20th of May</strong>
                 </p>
             </div>
-            <h2 className="p-3 text-4xl text-black dark:text-m27v1 text-center">Biography</h2>
+            <h2 className={h2Class}>Biography</h2>
             <div className={infoBoxClass}>
                 I live in Belgium, speak English, Dutch, Italian(I'm half Italian) and a bit of French.
                 When I game it's usually X-Plane, Minecraft, ETS2 or Universe Sandbox.
@@ -43,7 +41,7 @@ export default function About() {
 
                 More on the 'Everything computers' part: I like coding, and use Python, C++ and JavaScript. Lua is a prominent contributor to my coding time too.
             </div>
-            <h2 id="website" className="p-3 text-4xl text-black dark:text-m27v1 text-center">Website Information</h2>
+            <h2 id="website" className={h2Class}>Website Information</h2>
             <div className={infoBoxClass}>
                 <p>
                     This website is created using <a href="https://nextjs.org/" target="_blank" className={linkClass}>

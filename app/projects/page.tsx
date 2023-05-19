@@ -1,18 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const showcaseImageGridClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl w-[95%] lg:w-[30%] lg:h-[100%] hover:scale-105 shadow-lg";
-const showcaseImageClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl lg:w-[70%] lg:h-[100%] hover:scale-105 shadow-lg";
-const showcaseVideoClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl w-[95%] h-[170px] lg:w-[30%] lg:h-[280px] hover:scale-105 shadow-lg";
-const showcaseImageCodeClass = "scale-gpu transition ease-in-out duration-200 rounded-2xl w-[110%] lg:w-[70%] lg:h-[100%] hover:scale-105";
-const linkButtonClass = "transition ease-in-out duration-200 p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v5-900 active:bg-m27v5-800 active:scale-90";
+import { showcaseImageClass, showcaseImageGridClass, showcaseImageCodeClass, showcaseVideoClass, linkClass, linkButtonClass } from "@/components/classes";
 
 export const metadata = {
     title: 'Projects - Matt3o0‘s website',
     description: 'This website tells you a bit more about Matt3o0.',
 }
-
-const linkClass = "no-underline hover:underline";
 
 export default function Projects() {
     return (

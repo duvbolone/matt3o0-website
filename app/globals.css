@@ -95,13 +95,33 @@
     }
 }
 
+@keyframes popup {
+    0% {
+        transform: translateX(-700px);
+    }
+    90% {
+        transform: translateX(0px);
+    }
+    95% {
+        transform: scale(105%);
+    }
+    100% {
+        transform: scale(100%);
+        transform: translateX(0px);
+    }
+}
 
 .r-gradient-heading {
     animation: rot-grad-heading 10s infinite;
 }
 
 .animate-shake {
-    animation: shake 0.5s infinite;
+    animation: shake 5s infinite;
+}
+
+.popup-anim {
+    animation: popup 0.5s forwards;
+    animation-delay: 5s;
 }
 
 @media (hover: hover) {

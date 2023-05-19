@@ -12,7 +12,8 @@ export default function Footer() {
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Pages</h1>
                 <li><Link href="/" className={linkClass}>Home</Link></li>
                 <li><Link href="/about" className={linkClass}>About</Link></li>
-                <li><Link href="/about" className={linkClass}>Projects</Link></li>
+                <li><Link href="/projects" className={linkClass}>Projects</Link></li>
+                <li><Link href="/privacy" className={linkClass}>Privacy</Link></li>
             </ul>
             <ul className="p-3 text-slate-500 hover:bg-m27v2 rounded-lg">
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Socials</h1>
