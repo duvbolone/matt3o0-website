@@ -2,7 +2,7 @@ import { robotoMono } from "@/app/layout"
 import Link from "next/link"
 import Image from "next/image";
 
-const linkButtonClass = "transition duration-10 delay-100 p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v2 active:bg-m27v4 active:scale-90";
+const linkButtonClass = "transition duration-10 delay-100 p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v4-700 active:bg-m27v4 active:scale-90";
 
 export default function NavBar() {
     return (
