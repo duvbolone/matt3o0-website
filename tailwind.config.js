@@ -18,7 +18,17 @@ module.exports = {
                     600: '#aa',
 
                 },
-                'm27v2': '#050505',
+                'm27v2': {
+                    300: '#070707',
+                    400: '#060606',
+                    500: '#050505',
+                    DEFAULT:'#050505',
+                    600: '#040404',
+                    700: '#030303',
+                    800: '#020202',
+                    900: '#010101',
+                    950: '#000000',
+                },
                 'm27v3': {
                     50: 'hsl(144deg, 12%, 87%)',
                     100: 'hsl(144deg, 11%, 82%)',
@@ -60,15 +70,9 @@ module.exports = {
                 'glow-md': '0 0px 10px 4px',
                 'glow-lg': '0 0px 10px 8px',
                 'glow-xl': '0 0px 20px 16px',
-            },
-            backgroundImage: {
-                'codesample1': 'url("/projects/xpdrefjson/code_sample.png")'
             }
         },
         safeList: ["hover:animate-shake"]
     },
     plugins: [],
-    variants: {
-        width: ["responsive", "hover", "focus"]
-    }
 }

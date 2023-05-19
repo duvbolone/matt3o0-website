@@ -20,7 +20,7 @@ export default function RootLayout({
                 <meta property="og:image" content="/M27.png"></meta>
                 <meta name="theme-color" content="#FFFFFF dark:#050505"></meta>
             </head>
-            <body className={inter.className + " bg-gradient-to-t from-m27v3 to-white dark:bg-gradient-to-t dark:from-m27v2 dark:to-black text-m27v2 dark:text-slate-400 h-100%"}>
+            <body className={inter.className + " bg-gradient-to-t from-m27v3 to-white dark:bg-gradient-to-t dark:from-m27v2-600 dark:to-black text-m27v2 dark:text-slate-400 h-100%"}>
                 <NavBar />
                 {children}
                 <Footer />
