@@ -10,13 +10,13 @@ const cardClass = "transition ease-in-out duration-500 w-11/12 lg:w-auto p-3 spa
 const cardHeaderClass = "text-lg text-m27v3-400";
 const cardPgClass = "text-m27v1-500 text-sm";
 
-const linkButtonClass = "transition ease-in-out duration-200 flex space-x-3 p-2 text-m27v3-400 rounded-full bg-transparent hover:border hover:border-m27v3-400 dark:border-m27v3-400 hover:border-2 text-sm hover:border-m27v3-900 hover:text-m27v1 active:bg-m27v3-900 active:border-m27v3-900 active:scale-90";
+const linkButtonClass = "transition ease-in-out duration-200 flex space-x-3 p-2 text-m27v3-400 rounded-full bg-transparentdark:border-m27v3-400 hover:scale-105 text-sm active:bg-m27v5-950 active:scale-90";
 
 export default function Home() {
     return (
         <main>
             <div className="grid justify-items-center py-20 text-6xl space-y-10">
-                <h1 className="transition duration-1000 p-3 text-transparent bg-clip-text hover:r-gradient-heading">Welcome wanderer!</h1>
+                <h1 className="transition duration-[10s] ease-in-out p-3 text-transparent bg-clip-text r-gradient-heading hover:scale-150">Welcome wanderer!</h1>
                 <p className="p-3 text-2xl text-slate-500">Let me show you what to do here</p>
                 <div className="flex flex-col lg:flex-row place-items-center space-y-3 lg:space-x-5 lg:space-y-0 text-2xl">
                     <div className={cardClass}>
