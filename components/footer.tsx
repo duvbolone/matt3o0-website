@@ -6,8 +6,8 @@ const linkClass = "no-underline hover:underline";
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col lg:flex-row lg:space-x-40 p-5  bg-m27v3 dark:bg-black align-items-center">
-            <h1 className={robotoMono.className + " py-2 text-4xl text-m27v1"}>Matt3o0</h1>
+        <footer className="flex flex-row flex-wrap lg:space-x-40 p-5  bg-m27v3 dark:bg-black align-items-center">
+            <h1 className={robotoMono.className + " hidden md:inline py-2 text-4xl text-m27v1"}>Matt3o0</h1>
             <ul className="p-3 text-slate-500 hover:bg-m27v2 rounded-lg">
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Pages</h1>
                 <li><Link href="/" className={linkClass}>Home</Link></li>

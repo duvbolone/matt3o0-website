@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --shake-lg-size: 20px;
+    --shake-lg-sizem: -20px;
+}
+
 @keyframes shake {
     0% {
         transform: translateX(0);
@@ -59,37 +65,57 @@
     }
 }
 
+@keyframes h-scroll {
+    from {
+        transform: translate(-100vh, 0);
+    }
+
+    to {
+        transform: translate(120vh, 0);
+    }
+}
+
 @keyframes rot-grad-heading {
     0% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 41%) 25%, #97a69d 50%, hsl(16deg, 24%, 49%) 100%);
     }
+
     10% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 43%) 23%, #97a69d 48%, hsl(16deg, 25%, 47%) 100%);
     }
+
     20% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 45%) 21%, #97a69d 46%, hsl(16deg, 24%, 45%) 100%);
     }
+
     30% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 47%) 19%, #97a69d 44%, hsl(16deg, 24%, 43%) 100%);
     }
+
     40% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 49%) 17%, #97a69d 42%, hsl(16deg, 24%, 41%) 100%);
     }
+
     50% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 51%) 15%, #97a69d 40%, hsl(16deg, 24%, 39%) 100%);
     }
+
     60% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 49%) 17%, #97a69d 42%, hsl(16deg, 24%, 41%) 100%);
     }
+
     70% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 47%) 19%, #97a69d 44%, hsl(16deg, 24%, 43%) 100%);
     }
+
     80% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 45%) 21%, #97a69d 46%, hsl(16deg, 24%, 45%) 100%);
     }
+
     90% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 43%) 23%, #97a69d 48%, hsl(16deg, 24%, 47%) 100%);
     }
+
     100% {
         background-image: linear-gradient(45deg, hsl(160deg, 3%, 41%) 25%, #97a69d 50%, hsl(16deg, 24%, 49%) 100%);
     }
@@ -99,12 +125,15 @@
     0% {
         transform: translateX(-700px);
     }
+
     90% {
         transform: translateX(0px);
     }
+
     95% {
         transform: scale(105%);
     }
+
     100% {
         transform: scale(100%);
         transform: translateX(0px);
@@ -119,9 +148,17 @@
     animation: shake 5s infinite;
 }
 
+.header-h-scroll {
+    animation: h-scroll 20s linear infinite;
+}
+
 .popup-anim {
     animation: popup 0.5s forwards;
     animation-delay: 5s;
+}
+
+.mirror-x {
+    transform: translate(0, -0.2rem) rotate(225deg);
 }
 
 @media (hover: hover) {

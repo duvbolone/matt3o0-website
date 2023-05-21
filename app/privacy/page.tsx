@@ -5,6 +5,11 @@ function getFavicon(url: string, size: number) {
     return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=${size}`
 }
 
+export const metadata = {
+    title: 'Privacy - Matt3o0‘s website',
+    description: 'This website tells you a bit more about Matt3o0.',
+}
+
 export default function Privacy() {
     return (
         <main className="p-10 grid place-items-center">

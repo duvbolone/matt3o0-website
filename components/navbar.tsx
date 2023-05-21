@@ -6,12 +6,12 @@ const linkButtonClass = "transition duration-10 delay-100 p-2 rounded-full bg-m2
 
 export default function NavBar() {
     return (
-        <nav className={robotoMono.className + " flex p-6 sticky top-0 backdrop-blur-[4px] z-50"}>
+        <nav className={robotoMono.className + " flex p-2 lg:p-6 sticky top-0 backdrop-blur-[4px] z-50 h-[5.5rem] lg:h-auto"}>
             <Link href="/" className="p-3 rounded-full space-x-2 flex hover:animate-shake active:bg-neutral-900/25">
                 <Image src="/M27.png" alt="M27 - The Dumbbell Nebula" width="64" height="64" className="h-14 w-14 rounded-full"></Image>
                 <h1 className="py-2 text-4xl text-m27v2 dark:text-m27v3">Matt3o0</h1>
             </Link>
-            <div className="px-10 space-x-4 hidden text-2xl right-0 absolute lg:flex">
+            <div className="px-10 space-x-4 hidden text-2xl right-0 absolute top-10 lg:flex">
                 <Link href="/about">
                     <button className={linkButtonClass} title="About" type="button">about</button>
                 </Link>

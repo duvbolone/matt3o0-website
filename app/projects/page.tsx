@@ -33,7 +33,7 @@ export default function Projects() {
                         <div className="flex flex-col py-2 lg:p-10 lg:py-10 space-y-3 lg:space-y-0 lg:flex-row lg:space-x-10 lg:place-items-center">
                             <Image width="540" height="960" alt="ClearFly 737-100 Tail" className={showcaseImageGridClass} src="https://media.discordapp.net/attachments/965597725519405106/1095072971980288000/737-100_-_2023-04-10_15.46.30.png"></Image>
                             <Image width="540" height="960" alt="ClearFly 737-100 at sunset" className={showcaseImageGridClass} src="https://cdn.discordapp.com/attachments/965597725519405106/1069383472084439141/737-100_-_2023-01-29_17.22.40.png"></Image>
-                            <iframe className={showcaseVideoClass + " h-[900px]"} src="https://www.youtube.com/embed/MEBqklSR100" width="540" height="960"></iframe>
+                            <iframe className={showcaseVideoClass} src="https://www.youtube.com/embed/MEBqklSR100" width="540" height="960"></iframe>
                         </div>
                         <div className="flex flex-col py-2 lg:p-10 lg:py-10 space-y-3 lg:space-y-0 lg:flex-row lg:space-x-10 lg:place-items-center">
                             <Image width="540" height="960" alt="ClearFly VA 737-800 Hectagons livery" className={showcaseImageGridClass} src="/projects/clearfly/cfva_1.png"></Image>
@@ -54,7 +54,7 @@ export default function Projects() {
                                 </button>
                             </a>
                             <a href="https://forums.x-plane.org/index.php?/forums/topic/265735-clearfly-boeing-737-100/&" target="_blank">
-                                <button className={linkButtonClass + " py-3 flex"} title="ClearFly on the X-Plane.org forums" type="button">
+                                <button className={linkButtonClass + " py-3"} title="ClearFly on the X-Plane.org forums" type="button">
                                     <Image src="/icons/arrow_outward_w.svg" width="64" height="64" alt="Arrow pointing right-top" className="h-6 w-6 relative top-0.5"/>x-plane.org
                                 </button>
                             </a>
