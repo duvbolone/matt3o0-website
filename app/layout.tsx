@@ -1,6 +1,6 @@
 //@ts-nocheck
 import './globals.css'
-import { Inter, Roboto_Mono } from 'next/font/google'
+import { Inter, Roboto_Mono, Rubik } from 'next/font/google'
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 import Popup from '@/components/privacy_popup';
@@ -8,6 +8,11 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const inter = Inter({ subsets: ['latin'] })
 export const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: ['100', '300', '400'] })
+export const rubik = Rubik({ subsets: ['latin'], weight: ['300', '400', '500'] })
+
+export function getFavicon(url: string, size: number) {
+    return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=${size}`
+}
 
 export default function RootLayout({
     children,

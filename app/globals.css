@@ -140,6 +140,21 @@
     }
 }
 
+@keyframes sidebar {
+    0% {
+        transform: translateX(700px);
+    }
+
+    90% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: scale(100%);
+        transform: translateX(0px);
+    }
+}
+
 .r-gradient-heading {
     animation: rot-grad-heading 10s infinite;
 }
@@ -155,6 +170,14 @@
 .popup-anim {
     animation: popup 0.5s forwards;
     animation-delay: 5s;
+}
+
+.sidebar-anim {
+    animation: sidebar 0.5s forwards;
+}
+
+.sidebar-ranim {
+    animation: sidebar 0.5s backwards;
 }
 
 .mirror-x {

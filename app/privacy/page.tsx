@@ -1,9 +1,6 @@
 import { h1Class, h2Class, linkClass, faviconPreviews, infoBoxClass } from "@/components/classes";
 import Image from "next/image";
-
-function getFavicon(url: string, size: number) {
-    return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=${size}`
-}
+import { getFavicon } from "../layout";
 
 export const metadata = {
     title: 'Privacy - Matt3o0‘s website',

@@ -1,14 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { infoBoxClass, faviconPreviews, linkClass, h1Class, h2Class } from'@/components/classes';
+import { getFavicon } from "../layout";
 
 export const metadata = {
     title: 'About - Matt3o0‘s website',
     description: 'This website tells you a bit more about Matt3o0.',
-}
-
-function getFavicon(url: string, size: number) {
-    return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=${size}`
 }
 
 
