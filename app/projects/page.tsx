@@ -12,10 +12,10 @@ export default function Projects() {
         <main id="top" className="p-10 grid place-items-center">
             <h1 className="p-3 text-6xl text-black dark:text-m27v1">Projects</h1>
             <ol className="list-disc text-lg lg:text-base">
-                <li><Link href="/projects#clearfly"  className={linkClass}>ClearFly</Link></li>
+                <li><Link href="/projects#clearfly" className={linkClass}>ClearFly</Link></li>
                 <li><Link href="/projects#xpdrefjson" className={linkClass}>X-Plane-DatarefJSON</Link></li>
-                <li><Link href="/projects#xpdevbot" className={linkClass}>X-PlaneDevBot</Link></li>
                 <li><Link href="/projects#my-website" className={linkClass}>My Website</Link> <span className="text-slate-500">(This website)</span></li>
+                <li className="text-slate-600 italic"><span>You can find more projects on my GitHub</span></li>
             </ol>
             <div className="h-[10rem]"></div>
             <div className="flex flex-col space-y-40">
@@ -44,19 +44,19 @@ export default function Projects() {
                         <div className="py-3 flex space-x-2">
                             <a href="https://github.com/ClearFly-Official" target="_blank">
                                 <button className={linkButtonClass} title="GitHub organization" type="button">
-                                    <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8"/>
+                                    <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8" />
                                 </button>
                             </a>
                             <a href="https://discord.gg/jjpwtusf6n" target="_blank">
                                 <button className={linkButtonClass} title="Discord server" type="button">
                                     <div className="h-8 w-8">
-                                        <Image src="/icons/discord-mark-white.png" width="64" height="64" alt="discord" className="h-6 w-8 relative top-1"/>
+                                        <Image src="/icons/discord-mark-white.png" width="64" height="64" alt="discord" className="h-6 w-8 relative top-1" />
                                     </div>
                                 </button>
                             </a>
                             <a href="https://forums.x-plane.org/index.php?/forums/topic/265735-clearfly-boeing-737-100/&" target="_blank">
                                 <button className={linkButtonClass + " py-3"} title="ClearFly on the X-Plane.org forums" type="button">
-                                    <Image src="/icons/arrow_outward_w.svg" width="64" height="64" alt="Arrow pointing right-top" className="h-6 w-6 relative top-0.5"/>x-plane.org
+                                    <Image src="/icons/arrow_outward_w.svg" width="64" height="64" alt="Arrow pointing right-top" className="h-6 w-6 relative top-0.5" />x-plane.org
                                 </button>
                             </a>
                         </div>
@@ -70,33 +70,12 @@ export default function Projects() {
                             for easy access in all kinds of applications.
                         </p>
                         <div className="flex flex-col place-items-center">
-                            <Image src="/projects/xpdrefjson/code_sample.png" alt="Code sample" width="1080" height="1902" className={showcaseImageCodeClass}/>
+                            <Image src="/projects/xpdrefjson/code_sample.png" alt="Code sample" width="1080" height="1902" className={showcaseImageCodeClass} />
                         </div>
                         <div className="py-3 flex space-x-2">
                             <a href="https://github.com/duvbolone/X-Plane-DatarefJSON" target="_blank">
                                 <button className={linkButtonClass} title="GitHub repository" type="button">
-                                    <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8"/>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="xpdevbot" className="grid place-items-center">
-                    <div className="flex">
-                        <Image src="/projects/xpdevbot/logo.png" className="h-10 w-10 relative top-2.5" width="128" height="128" alt="XPlaneDevBot logo"></Image>
-                        <h2 className="p-3 text-4xl text-black dark:text-m27v1">X-PlaneDevBot</h2>
-                    </div>
-                    <div className="flex flex-col place-items-center">
-                        <p className="max-w-2xl">
-                            X-PlaneDevBot is a Discord bot to help you in your X-Plane developing journey. It has features like dataref lookup, SDK Documents, and more.
-                        </p>
-                        <div className="flex flex-col place-items-center">
-                            <Image src="/projects/xpdevbot/banner.png" alt="X-PlaneDevBot in action" width="1080" height="1902" className={showcaseImageClass}/>
-                        </div>
-                        <div className="py-3 flex space-x-2">
-                            <a href="https://matt3o0.is-a.dev/xpdevbot" target="_blank">
-                                <button className={linkButtonClass + " py-3 flex"} title="Website link" type="button">
-                                    <Image src="/icons/arrow_outward_w.svg" alt="GitHub" width="64" height="64" className="h-6 w-6 relative top-0.5"/>Website
+                                    <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8" />
                                 </button>
                             </a>
                         </div>
@@ -114,12 +93,12 @@ export default function Projects() {
                         <div className="py-5 flex space-x-2">
                             <a href="https://github.com/duvbolone/matt3o0-website" target="_blank">
                                 <button className={linkButtonClass} title="GitHub repository" type="button">
-                                    <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8"/>
+                                    <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8" />
                                 </button>
                             </a>
                             <a href="https://matt3o0.is-a.dev/" target="_blank">
                                 <button className={linkButtonClass + " py-3 flex"} title="Website link" type="button">
-                                    <Image src="/icons/arrow_outward_w.svg" alt="GitHub" width="64" height="64" className="h-6 w-6 relative top-0.5"/>Website
+                                    <Image src="/icons/arrow_outward_w.svg" alt="GitHub" width="64" height="64" className="h-6 w-6 relative top-0.5" />Website
                                 </button>
                             </a>
                         </div>

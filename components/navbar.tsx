@@ -3,8 +3,7 @@ import SideBar from "./sidebar";
 import { robotoMono } from "@/app/layout"
 import Link from "next/link"
 import Image from "next/image";
-
-const linkButtonClass = "transition duration-10 delay-100 p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v4-700 active:bg-m27v4 active:scale-90";
+import { linkButtonClass, linkButtonIconClass } from "./classes";
 
 export default function NavBar() {
     return (
@@ -22,12 +21,12 @@ export default function NavBar() {
                 </Link>
                 <div className="space-x-2">
                     <a href="https://github.com/duvbolone" target="_blank">
-                        <button className={linkButtonClass} title="GitHub account" type="button">
+                        <button className={linkButtonIconClass} title="GitHub account" type="button">
                             <Image src="/icons/github-mark-white.png" alt="github" width="64" height="64" className="lg:h-8 lg:w-8"></Image>
                         </button>
                     </a>
                     <a href="https://discord.com/users/668874138160594985" target="_blank">
-                        <button className={linkButtonClass} title="Discord account" type="button">
+                        <button className={linkButtonIconClass} title="Discord account" type="button">
                             <div className="h-8 w-8">
                                 <Image src="/icons/discord-mark-white.png" alt="discord" width="64" height="64" className="h-2 lg:h-6 relative top-1"></Image>
                             </div>
