@@ -1,5 +1,5 @@
 // about me info boxes
-export const infoBoxClass = "p-4 shadow-lg border border-m27v3-200 dark:border-slate-900 transition duration-200 hover:dark:bg-neutral-950 hover:shadow-m27v3-200 hover:dark:shadow-neutral-950 hover:shadow-glow-lg transform-gpu rounded-lg text-lg max-w-2xl ";
+export const infoBoxClass = "p-4 w-[110%] lg:w-[40%] shadow-lg border border-m27v3-200 dark:border-slate-900 rounded-lg text-lg max-w-2xl ";
 
 // for links
 export const faviconPreviews = "h-4 w-4 inline relative bottom-0.5 rounded-full"
