@@ -18,5 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: 'https://matt3o0.is-a.dev/privacy',
             lastModified: new Date(),
         },
+        {
+            url: 'https://matt3o0.is-a.dev/xpdevbot',
+            lastModified: new Date(),
+        },
     ];
 }

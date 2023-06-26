@@ -20,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className="bg-white dark:bg-black">
+        <html lang="en" className="bg-white dark:bg-black scroll-smooth">
             <head>
                 <meta charSet='utf-8'></meta>
                 <meta property="og:image" content="/M27.png"></meta>

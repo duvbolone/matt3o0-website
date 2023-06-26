@@ -22,8 +22,8 @@ const SideBar = () => {
         )
     } else if (showSideBar == true) {
         return (
-            <div className={inter.className + " sidebar-anim p-3 overflow-hidden bg-slate-300 dark:bg-slate-950 fixed top-2 right-2 rounded-md shadow-2xl w-[95%] h-[800%]"}>
-                <button onClick={handleClickBar} className={rubik.className + " text-slate-600 text-4xl px-4 p-2 right-2 font-bold absolute rounded-full bg-gray-400 dark:bg-gray-800"}>
+            <div className={inter.className + " sidebar-anim p-3 overflow-hidden bg-transparent backdrop-blur-2xl fixed top-2 right-2 rounded-md shadow-2xl w-[95%] h-[800%]"}>
+                <button onClick={handleClickBar} className={rubik.className + " text-neutral-600 text-[3em] p-4 right-2 font-bold absolute"}>
                     X
                 </button>
                 <div className="py-10 space-y-2 text-4xl flex flex-col">
@@ -33,9 +33,10 @@ const SideBar = () => {
                     <Link href="/projects">
                         Projects
                     </Link>
+                    <div className="h-10"></div>
                     <div className="-space-y-4">
-                        <a href="https://github.com/duvbolone" target="_blank" className={linkClass + "py-3 block"}><Image src={getFavicon("https://github.com", 32)} width="32" height="32" alt="GitHub logo" className={faviconPreviewsLG} /> <strong>GitHub</strong></a>
-                        <a href="https://discord.com/users/668874138160594985" target="_blank" className={linkClass + "py-3 block"}><Image src={getFavicon("https://discord.com", 32)} width="32" height="32" alt="Discord logo" className={faviconPreviewsLG} /> <strong>Discord</strong></a>
+                        <a href="https://github.com/duvbolone" target="_blank" className={linkClass + "py-3 block"}><Image src={getFavicon("https://github.com", 128)} width="128" height="128" alt="GitHub logo" className={faviconPreviewsLG} /> <strong>GitHub</strong></a>
+                        <a href="https://discord.com/users/668874138160594985" target="_blank" className={linkClass + "py-3 block"}><Image src={getFavicon("https://discord.com", 128)} width="128" height="128" alt="Discord logo" className={faviconPreviewsLG} /> <strong>Discord</strong></a>
                     </div>
                 </div>
             </div>

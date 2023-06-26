@@ -14,6 +14,7 @@ export default function Projects() {
             <ol className="list-disc text-lg lg:text-base">
                 <li><Link href="/projects#clearfly"  className={linkClass}>ClearFly</Link></li>
                 <li><Link href="/projects#xpdrefjson" className={linkClass}>X-Plane-DatarefJSON</Link></li>
+                <li><Link href="/projects#xpdevbot" className={linkClass}>X-PlaneDevBot</Link></li>
                 <li><Link href="/projects#my-website" className={linkClass}>My Website</Link> <span className="text-slate-500">(This website)</span></li>
             </ol>
             <div className="h-[10rem]"></div>
@@ -80,6 +81,27 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
+                <div id="xpdevbot" className="grid place-items-center">
+                    <div className="flex">
+                        <Image src="/projects/xpdevbot/logo.png" className="h-10 w-10 relative top-2.5" width="128" height="128" alt="XPlaneDevBot logo"></Image>
+                        <h2 className="p-3 text-4xl text-black dark:text-m27v1">X-PlaneDevBot</h2>
+                    </div>
+                    <div className="flex flex-col place-items-center">
+                        <p className="max-w-2xl">
+                            X-PlaneDevBot is a Discord bot to help you in your X-Plane developing journey. It has features like dataref lookup, SDK Documents, and more.
+                        </p>
+                        <div className="flex flex-col place-items-center">
+                            <Image src="/projects/xpdevbot/banner.png" alt="X-PlaneDevBot in action" width="1080" height="1902" className={showcaseImageClass}/>
+                        </div>
+                        <div className="py-3 flex space-x-2">
+                            <a href="https://matt3o0.is-a.dev/xpdevbot" target="_blank">
+                                <button className={linkButtonClass + " py-3 flex"} title="Website link" type="button">
+                                    <Image src="/icons/arrow_outward_w.svg" alt="GitHub" width="64" height="64" className="h-6 w-6 relative top-0.5"/>Website
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div id="my-website" className="grid place-items-center">
                     <h2 className="p-3 text-4xl text-black dark:text-m27v1">My Website</h2>
                     <div className="flex flex-col place-items-center">
@@ -87,7 +109,7 @@ export default function Projects() {
                             My website is well, a website, that's supposed to tell a little bit more about me and you're browsing it right now. I hope you like it!
                         </p>
                         <p className="py-4 max-w-2xl">
-                            PS: You can find more information about it <Link href="/about#website"><strong>here</strong></Link>
+                            PS: You can find more information about it <Link href="/about#website"><strong className="hover:underline">here</strong></Link>
                         </p>
                         <div className="py-5 flex space-x-2">
                             <a href="https://github.com/duvbolone/matt3o0-website" target="_blank">
