@@ -16,10 +16,10 @@ export const showcaseVideoClass = "p-3 scale-gpu transition ease-in-out duration
 export const showcaseImageCodeClass = "p-3 scale-gpu transition ease-in-out duration-200 rounded-2xl w-[110%] lg:w-[70%] lg:h-[100%] hover:scale-105 ";
 
 // home page cards
-export const cardClass = "group transition ease-in-out duration-500 w-11/12 lg:w-auto p-3 space-y-3 flex flex-col rounded-lg text-slate-400 bg-gradient-to-bl from-gray-100 to-gray-200 dark:from-m27v4 dark:to-m27v2 hover:bg-gradient-to-bl hover:from-m27v5-200 hover:to-m27v5-600 hover:dark:from-m27v5-600 hover:dark:to-m27v5-950 hover:shadow-m27v5-950 hover:shadow-glow-md hover:scale-105 ";
+export const cardClass = "group transition ease-in-out duration-500 w-11/12 lg:w-auto p-3 space-y-3 flex flex-col rounded-lg text-slate-400 bg-gradient-to-bl from-gray-100 to-gray-200 dark:from-m27v4 dark:to-m27v2 hover:bg-gradient-to-bl hover:from-m27v5-200 hover:to-m27v5-600 hover:dark:from-m27v5-600 hover:dark:to-m27v5-950 hover:shadow-m27v5-200 hover:shadow-glow-sm hover:scale-105 ";
 export const cardHeaderClass = "text-lg text-m27v3-700 group-hover:text-white";
 export const cardPgClass = "text-neutral-500 text-sm group-hover:text-neutral-300";
-export const cardButtonClass = "transition ease-in-out duration-200 flex space-x-3 p-2 text-m27v3-600 rounded-full bg-transparentdark:border-m27v3-400 hover:scale-105 text-sm active:bg-m27v5-950 active:scale-90 ";
+export const cardButtonClass = "transition ease-in-out duration-200 flex space-x-3 p-2 text-m27v3-600 group-hover:text-m27v3-300 rounded-full bg-transparent text-sm hover:bg-m27v5-700 active:scale-90";
 
 // buttons
 export const buttonClass = "transition ease-in-out duration-200 p-2 rounded-lg bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v5-900 active:bg-m27v5-800 active:scale-90 "
