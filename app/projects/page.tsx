@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { showcaseImageClass, showcaseImageGridClass, showcaseImageCodeClass, showcaseVideoClass, linkClass, linkButtonClass } from "@/components/classes";
+import { showcaseImageClass, showcaseImageGridClass, showcaseImageCodeClass, showcaseVideoClass, linkClass, linkButtonClass, linkButtonIconClass } from "@/components/classes";
 
 export const metadata = {
     title: 'Projects - Matt3o0‘s website',
@@ -43,12 +43,12 @@ export default function Projects() {
                         </div>
                         <div className="py-3 flex space-x-2">
                             <a href="https://github.com/ClearFly-Official" target="_blank">
-                                <button className={linkButtonClass} title="GitHub organization" type="button">
+                                <button className={linkButtonIconClass} title="GitHub organization" type="button">
                                     <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8" />
                                 </button>
                             </a>
                             <a href="https://discord.gg/jjpwtusf6n" target="_blank">
-                                <button className={linkButtonClass} title="Discord server" type="button">
+                                <button className={linkButtonIconClass} title="Discord server" type="button">
                                     <div className="h-8 w-8">
                                         <Image src="/icons/discord-mark-white.png" width="64" height="64" alt="discord" className="h-6 w-8 relative top-1" />
                                     </div>
@@ -74,7 +74,7 @@ export default function Projects() {
                         </div>
                         <div className="py-3 flex space-x-2">
                             <a href="https://github.com/duvbolone/X-Plane-DatarefJSON" target="_blank">
-                                <button className={linkButtonClass} title="GitHub repository" type="button">
+                                <button className={linkButtonIconClass} title="GitHub repository" type="button">
                                     <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8" />
                                 </button>
                             </a>
@@ -92,7 +92,7 @@ export default function Projects() {
                         </p>
                         <div className="py-5 flex space-x-2">
                             <a href="https://github.com/duvbolone/matt3o0-website" target="_blank">
-                                <button className={linkButtonClass} title="GitHub repository" type="button">
+                                <button className={linkButtonIconClass} title="GitHub repository" type="button">
                                     <Image src="/icons/github-mark-white.png" width="64" height="64" alt="github" className="h-8 w-8" />
                                 </button>
                             </a>
