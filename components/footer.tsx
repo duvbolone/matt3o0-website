@@ -8,14 +8,14 @@ export default function Footer() {
     return (
         <footer className="flex flex-row flex-wrap lg:space-x-40 p-5  bg-m27v3 dark:bg-black align-items-center">
             <h1 className={robotoMono.className + " hidden md:inline py-2 text-4xl text-m27v1"}>Matt3o0</h1>
-            <ul className="p-3 text-slate-500 hover:bg-m27v2 rounded-lg">
+            <ul className="p-3 text-slate-500rounded-lg">
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Pages</h1>
                 <li><Link href="/" className={linkClass}>Home</Link></li>
                 <li><Link href="/about" className={linkClass}>About</Link></li>
                 <li><Link href="/projects" className={linkClass}>Projects</Link></li>
                 <li><Link href="/privacy" className={linkClass}>Privacy</Link></li>
             </ul>
-            <ul className="p-3 text-slate-500 hover:bg-m27v2 rounded-lg">
+            <ul className="p-3 text-slate-500rounded-lg">
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Socials</h1>
                 <li><a href="https://github.com/duvbolone" target="_blank" className={linkClass}>GitHub</a></li>
                 <li><a href="https://discord.com/users/668874138160594985" target="_blank" className={linkClass}>Discord</a></li>
