@@ -58,7 +58,7 @@ export default function About() {
                     </a>.
                 </p>
                 <p className="py-1">
-                    Source code is available on <a href="https://github.com/duvbolone/duvbolone.github.io" target="_blank" className={linkClass}>
+                    Source code is available on <a href="https://github.com/duvbolone/matt3o0-website" target="_blank" className={linkClass}>
                         <Image src="/icons/github-mark-white.png" width="32" height="32" alt="GitHub logo" className={faviconPreviews} />
                         <strong>GitHub</strong>
                     </a> under the <strong><a href="https://mit-license.org/" target="_blank" className={linkClass}><Image src={getFavicon("https://mit-license.org", 32)} width="32" height="32" alt="Vercel logo" className={faviconPreviews} />MIT License</a></strong>.
