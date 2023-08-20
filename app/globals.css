@@ -191,7 +191,6 @@
 }
 
 .nav-background {
-    backdrop-filter: blur(3px);
-    /* background: red; */
+    backdrop-filter: blur(4px);
     mask-image: linear-gradient(rgba(0, 0, 0, 1) 60%, transparent 95%);
 }
