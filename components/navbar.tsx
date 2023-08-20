@@ -7,7 +7,7 @@ import { linkButtonClass, linkButtonIconClass } from "./classes";
 
 export default function NavBar() {
     return (
-        <nav className={robotoMono.className + " flex p-2 lg:p-6 sticky top-0 z-50 h-[5.5rem] lg:h-auto nav-background"}>
+        <nav className={robotoMono.className + " flex p-2 lg:p-6 sticky top-0 z-50 h-[5.5rem] lg:h-auto nav-background"} id="navbar">
             <Link href="/" className="p-3 rounded-full space-x-2 flex hover:animate-shake active:bg-neutral-900/25">
                 <Image src="/M27.png" alt="M27 - The Dumbbell Nebula" width="64" height="64" className="h-14 w-14 rounded-full"></Image>
                 <h1 className="py-2 text-4xl text-m27v2 dark:text-m27v3">Matt3o0</h1>
@@ -34,7 +34,7 @@ export default function NavBar() {
                     </a>
                 </div>
             </div>
-            <SideBar/>
+            <SideBar />
         </nav>
     );
 }
