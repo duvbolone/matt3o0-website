@@ -34,7 +34,13 @@ export async function GET(request: NextRequest) {
             time: epoch
         }), {
             status: 200,
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0',
+                'Surrogate-Control': 'no-store',
+            }
         });
     } catch (err) {
         return new NextResponse(JSON.stringify({
