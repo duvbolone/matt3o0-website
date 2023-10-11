@@ -161,6 +161,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 500,
             message: `${err}`,
+            link: "none"
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },
