@@ -7,7 +7,7 @@ const dbName = 'matt3o0-website';
 
 function generateShortID(length: number): string {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const randomBytesCount = Math.ceil((length * 3) / 4); // Since 3 bytes encode 4 characters
+    const randomBytesCount = Math.ceil((length * 3) / 4);
   
     const randomBytesBuffer = randomBytes(randomBytesCount);
     let shortID = '';
@@ -52,6 +52,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 401,
             message: 'Invalid token.',
+            link: null,
         }), {
             status: 401,
             headers: { 'Content-Type': 'application/json' },
@@ -63,6 +64,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 500,
             message: 'MongoDB error.',
+            link: null,
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },
@@ -76,6 +78,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 400,
             message: 'No URL specified.',
+            link: null,
         }), {
             status: 400,
             headers: { 'Content-Type': 'application/json' },
@@ -85,6 +88,7 @@ export async function POST(request: NextRequest) {
             return new NextResponse(JSON.stringify({
                 status: 400,
                 message: 'Invalid URL specified.',
+                link: null,
             }), {
                 status: 400,
                 headers: { 'Content-Type': 'application/json' },
@@ -96,6 +100,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 400,
             message: 'No value for stops_on specified.',
+            link: null,
         }), {
             status: 400,
             headers: { 'Content-Type': 'application/json' },
@@ -132,6 +137,7 @@ export async function POST(request: NextRequest) {
                     return new NextResponse(JSON.stringify({
                         status: 400,
                         message: 'Redirect ID already exists in database.',
+                        link: null,
                     }), {
                         status: 400,
                         headers: { 'Content-Type': 'application/json' },
@@ -161,7 +167,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 500,
             message: `${err}`,
-            link: "none"
+            link: null,
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },
