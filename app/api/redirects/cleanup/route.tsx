@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 const mongo_url = process.env.MONGODB_URI;
 const dbName = 'matt3o0-website';
 
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
     let client;
     if (!mongo_url) {
         return new NextResponse(JSON.stringify({
