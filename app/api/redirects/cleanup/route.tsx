@@ -22,15 +22,16 @@ export async function GET(request: NextRequest) {
 
         const db = client.db(dbName);
         const collection = db.collection("redirects");
-        const epoch = Math.floor(Date.now() / 1000);
+        let epoch = Math.floor(Date.now() / 1000);
         const deleteCriteria = {
             stops_on: { $lte: epoch, $ne: 1 }
           };
           
         const result = await collection.deleteMany(deleteCriteria);
-        return new NextResponse(JSON.stringify({
+        const response =  new NextResponse(JSON.stringify({
             status: 200,
             message: 'Successfully removed all old redirects.',
+            result: result,
             time: epoch
         }), {
             status: 200,
@@ -42,6 +43,7 @@ export async function GET(request: NextRequest) {
                 'Surrogate-Control': 'no-store',
             }
         });
+        return response;
     } catch (err) {
         return new NextResponse(JSON.stringify({
             status: 500,
