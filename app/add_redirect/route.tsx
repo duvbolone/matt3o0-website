@@ -45,6 +45,7 @@ function isValidURL(url: string): boolean {
   }
 
 export async function POST(request: NextRequest) {
+    const host = `http://${request.headers.get('host')}`
     const requestBody = await request.json();
 
     if (requestBody && requestBody.token != process.env.UPDATE_TOKEN) {
@@ -151,6 +152,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 200,
             message: insertResult,
+            link: host + '/r/' + redirectId
         }), {
             status: 200,
             headers: { 'Content-Type': 'application/json', 'Allow': 'POST' },
