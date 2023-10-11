@@ -27,10 +27,11 @@ export async function GET(request: NextRequest) {
             stops_on: { $lte: epoch, $ne: 1 }
           };
           
-        await collection.deleteMany(deleteCriteria);
+        const result = await collection.deleteMany(deleteCriteria);
         return new NextResponse(JSON.stringify({
             status: 200,
             message: 'Successfully removed all old redirects.',
+            result: result
         }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' },
