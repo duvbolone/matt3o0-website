@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
         return new NextResponse(JSON.stringify({
             status: 500,
             message: `${err}`,
-            data: {}
+            result: {}
         }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },

@@ -4,7 +4,9 @@ import { NextRequest, NextResponse } from "next/server";
 const mongo_url = process.env.MONGODB_URI;
 const dbName = 'matt3o0-website';
 
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
+    const url = new URL(request.url, `http://${request.headers.get('host')}`);
+    const queryParams = new URLSearchParams(url.search);
     let client;
     if (!mongo_url) {
         return new NextResponse(JSON.stringify({
@@ -16,21 +18,28 @@ export async function POST(request: NextRequest) {
         });
     }
 
+    // if (queryParams.get('token') != process.env.UPDATE_TOKEN) {
+    //     return new NextResponse(JSON.stringify({
+    //         status: 401,
+    //         message: 'Invalid token.',
+    //     }), {
+    //         status: 401,
+    //         headers: { 'Content-Type': 'application/json' },
+    //     });
+    // }
+
     try {
         client = new MongoClient(mongo_url);
         await client.connect();
 
         const db = client.db(dbName);
         const collection = db.collection("redirects");
-        let epoch = Math.floor(Date.now() / 1000);
-        const deleteCriteria = {
-            stops_on: { $lte: epoch, $ne: 1 }
-          };
           
-        const result = await collection.deleteMany(deleteCriteria);
+        const result = await collection.find().toArray();
+
         const response =  new NextResponse(JSON.stringify({
             status: 200,
-            message: 'Successfully removed all old redirects.',
+            message: "Success!",
             result: result,
         }), {
             status: 200,
