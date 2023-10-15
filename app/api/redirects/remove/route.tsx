@@ -4,7 +4,10 @@ import { NextRequest, NextResponse } from "next/server";
 const mongo_url = process.env.MONGODB_URI;
 const dbName = 'matt3o0-website';
 
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
+    const url = new URL(request.url, `http://${request.headers.get('host')}`);
+    const queryParams = new URLSearchParams(url.search);
+    const redirect_id = queryParams.get('redirect_id');
     let client;
     if (!mongo_url) {
         return new NextResponse(JSON.stringify({
@@ -12,6 +15,26 @@ export async function POST(request: NextRequest) {
             message: 'MongoDB error.',
         }), {
             status: 500,
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+
+    if (queryParams.get('token') != process.env.UPDATE_TOKEN) {
+        return new NextResponse(JSON.stringify({
+            status: 401,
+            message: 'Invalid token.',
+        }), {
+            status: 401,
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+
+    if (!redirect_id) {
+        return new NextResponse(JSON.stringify({
+            status: 400,
+            message: 'No redirect_id provided.',
+        }), {
+            status: 400,
             headers: { 'Content-Type': 'application/json' },
         });
     }
@@ -24,13 +47,21 @@ export async function POST(request: NextRequest) {
         const collection = db.collection("redirects");
         let epoch = Math.floor(Date.now() / 1000);
         const deleteCriteria = {
-            stops_on: { $lte: epoch, $ne: 1 }
+            redirect_id: redirect_id
           };
           
-        const result = await collection.deleteMany(deleteCriteria);
+        const result = await collection.deleteOne(deleteCriteria);
+        let message;
+        
+        if (result.deletedCount != 0) {
+            message = `Successfully removed '${redirect_id}'.`;
+        } else {
+            message = `Nothing was removed.`;
+        }
+
         const response =  new NextResponse(JSON.stringify({
             status: 200,
-            message: 'Successfully removed all old redirects.',
+            message: message,
             result: result,
         }), {
             status: 200,
