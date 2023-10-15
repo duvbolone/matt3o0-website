@@ -45,7 +45,6 @@ export async function GET(request: NextRequest) {
 
         const db = client.db(dbName);
         const collection = db.collection("redirects");
-        let epoch = Math.floor(Date.now() / 1000);
         const deleteCriteria = {
             redirect_id: redirect_id
           };
