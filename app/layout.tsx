@@ -11,7 +11,7 @@ export const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: ['100', '300
 export const rubik = Rubik({ subsets: ['latin'], weight: ['300', '400', '500'] })
 
 export function getFavicon(url: string, size: number) {
-    return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=${size}`
+    return `https://www.google.com/s2/favicons?domain=${new URL(url).origin}&sz=${size}`
 }
 
 export default function RootLayout({

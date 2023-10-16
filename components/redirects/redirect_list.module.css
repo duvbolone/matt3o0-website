@@ -1,0 +1,57 @@
+.icon {
+    background-image: url("../../public/loading_light.svg");
+    height: 5em;
+    width: 5em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: iconRotate 1.4s ease-in-out infinite;
+}
+
+.table_container {
+    max-width: 90vw;
+    padding: -2px;
+    border: 3px solid #888;
+    border-radius: 1em;
+    overflow: auto;
+}
+
+.table_desc,
+.table_heading {
+    cursor: pointer;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #888;
+}
+
+.table_heading {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.table_row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes iconRotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon {
+        background-image: url("../../public/loading_dark.svg");
+    }
+
+    .table_desc,
+    .table_heading {
+        border: 1px solid#333;
+    }
+
+    .table_container {
+        border: 3px solid#333;
+    }
+}

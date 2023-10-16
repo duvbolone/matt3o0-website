@@ -2,9 +2,9 @@
 export const infoBoxClass = "p-4 w-[110%] lg:w-[40%] shadow-lg border border-m27v3-200 dark:border-slate-900 rounded-lg text-lg max-w-2xl ";
 
 // for links
-export const faviconPreviews = "h-4 w-4 inline relative bottom-0.5 rounded-full"
-export const faviconPreviewsLG = "h-8 w-8 inline relative bottom-0.5 rounded-full"
-export const linkClass = "no-underline hover:underline ";
+export const faviconPreviews = "h-4 w-4 inline relative top-0.5 m-0.5 rounded-full"
+export const faviconPreviewsLG = "h-8 w-8 inline relative top-0.5 m-0.5 rounded-full"
+export const linkClass = "no-underline hover:underline flex";
 export const linkButtonClass = "flex transition ease-in-out duration-200 p-2 px-4 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v5-900 active:bg-m27v5-800 active:scale-90 ";
 export const linkButtonIconClass = "transition ease-in-out duration-200 p-2 rounded-full bg-m27v4 text-m27v1 dark:hover:text-m27v1 hover:bg-m27v5-900 active:bg-m27v5-800 active:scale-90 ";
 
