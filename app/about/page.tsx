@@ -1,7 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
-import { infoBoxClass, faviconPreviews, linkClass, h1Class, h2Class } from'@/components/classes';
-import { getFavicon } from "../layout";
+import { infoBoxClass, linkClass, h1Class, h2Class } from '@/components/classes';
+import IconLink from "@/components/link";
 
 export const metadata = {
     title: 'About - Matt3o0‘s website',
@@ -41,27 +39,16 @@ export default function About() {
             <h2 id="website" className={h2Class}>Website Information</h2>
             <div className={infoBoxClass}>
                 <p>
-                    This website is created using <a href="https://nextjs.org/" target="_blank" className={linkClass}>
-                        <Image src={getFavicon("https://nextjs.org", 32)} width="32" height="32" alt="Next.js logo" className={faviconPreviews} />
-                        <strong>Next.js</strong>
-                    </a> and <a href="https://tailwindcss.com/" target="_blank" className={linkClass}>
-                        <Image src={getFavicon("https://tailwindcss.com", 32)} width="32" height="32" alt="Tailwind CSS logo" className={faviconPreviews} />
-                        <strong>Tailwind CSS</strong>
-                    </a>.
+                    This website is created using <IconLink url="https://nextjs.org/" title="Next JS" /> and <IconLink url="https://tailwindcss.com/" title="Tailwind CSS" />.
                 </p>
                 <p>
-                    Hosting is provided by <a href="https://vercel.com" target="_blank" className={linkClass}>
-                        <Image src={getFavicon("https://vercel.com", 32)} width="32" height="32" alt="Vercel logo" className={faviconPreviews} />
-                        <strong>Vercel</strong> </a> and the
+                    Hosting is provided by <IconLink url="https://vercel.com/" title="Vercel" /> and the
                     domain by <a href="https://is-a.dev" target="_blank" className={linkClass}>
                         <strong>is-a.dev</strong>
                     </a>.
                 </p>
                 <p className="py-1">
-                    Source code is available on <a href="https://github.com/duvbolone/matt3o0-website" target="_blank" className={linkClass}>
-                        <Image src="/icons/github-mark-white.png" width="32" height="32" alt="GitHub logo" className={faviconPreviews} />
-                        <strong>GitHub</strong>
-                    </a> under the <strong><a href="https://mit-license.org/" target="_blank" className={linkClass}><Image src={getFavicon("https://mit-license.org", 32)} width="32" height="32" alt="Vercel logo" className={faviconPreviews} />MIT License</a></strong>.
+                    Source code is available on <IconLink url="https://github.com/duvbolone/matt3o0-website" title="GitHub" /> under the <IconLink url="https://mit-license.org/" title="MIT-license" />.
                 </p>
                 <p className="py-2">
                     Thank you to all these organizations for their amazing services!

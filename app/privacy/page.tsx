@@ -1,6 +1,5 @@
-import { h1Class, h2Class, linkClass, faviconPreviews, infoBoxClass } from "@/components/classes";
-import Image from "next/image";
-import { getFavicon } from "../layout";
+import { h1Class, h2Class, infoBoxClass } from "@/components/classes";
+import IconLink from "@/components/link";
 
 export const metadata = {
     title: 'Privacy - Matt3o0‘s website',
@@ -13,7 +12,7 @@ export default function Privacy() {
             <h1 className={h1Class} id="top">Privacy</h1>
             <p className={infoBoxClass + "divide-y"}>
                 All saved data is for analytic purposes only. The only way I (Matt3o0) will have access to it is via the Vercel dashboard. The data will not and will never be sold to any company or organization.
-                <a href="https://vercel.com/docs/concepts/analytics/privacy-policy" target="_blank" className={linkClass + "py-3 block"}><Image src={getFavicon("https://vercel.com", 32)} width="32" height="32" alt="Vercel logo" className={faviconPreviews} /> <strong>Vercel Web Analytics: Privacy Policy</strong></a>
+                <IconLink url="https://vercel.com/docs/concepts/analytics/privacy-policy" title="Vercel Web Analytics: Privacy Policy" />
             </p>
             <h2 className={h2Class}>Stored Information</h2>
             <div className={infoBoxClass}>
