@@ -18,7 +18,7 @@ function timestampToHumanReadable(timestamp: number, type: "relative" | "full" =
     const now = Date.now();
 
     if (timestamp == 1) {
-        return "Forever";
+        return "Never";
     }
 
     if (now / 1000 - timestamp >= 0) {
