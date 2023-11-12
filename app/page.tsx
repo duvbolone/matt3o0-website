@@ -19,21 +19,21 @@ export default function Home() {
                             <h1 className={cardHeaderClass}>About Me</h1>
                             <p className={cardPgClass}>Check out what kind of weird human being I am.</p>
                         </div>
-                        <Link href="/about"><button className={cardButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>About</button></Link>
+                        <Link href="/about"><button className={cardButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5" />About</button></Link>
                     </div>
                     <div className={cardClass}>
                         <div>
                             <h1 className={cardHeaderClass}>My Projects</h1>
                             <p className={cardPgClass}>Take a look at what I have made, or what I am making.</p>
                         </div>
-                        <Link href="/projects"><button className={cardButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>Projects</button></Link>
+                        <Link href="/projects"><button className={cardButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5" />Projects</button></Link>
                     </div>
                     <div className={cardClass}>
                         <div>
                             <h1 className={cardHeaderClass}>Website Source Code</h1>
                             <p className={cardPgClass}>The source code of this website, if you're interested in bad code.</p>
                         </div>
-                        <Link href="https://github.com/duvbolone/matt3o0-website"><button className={cardButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5"/>Source Code</button></Link>
+                        <Link href="https://github.com/duvbolone/matt3o0-website"><button className={cardButtonClass}><Image src="/icons/arrow_outward.svg" alt="Arrow pointing right-top" width="64" height="64" className="h-5 w-5" />Source Code</button></Link>
                     </div>
                 </div>
             </div>

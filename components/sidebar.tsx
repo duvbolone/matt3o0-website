@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonClass, faviconPreviews, faviconPreviewsLG, linkButtonClass, linkClass } from "@/components/classes";
-import { getFavicon, inter, rubik } from "../app/layout";
+import { getFavicon } from "../app/layout";
+import { inter, rubik } from "./fonts";
 
 const SideBar = () => {
     const [showSideBar, setShowSideBar] = useState(false);

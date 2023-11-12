@@ -1,4 +1,4 @@
-import { robotoMono } from "@/app/layout"
+import { robotoMono } from "./fonts";
 import { link } from "fs"
 import Link from "next/link"
 

@@ -1,6 +1,6 @@
 //@ts-nocheck
 import SideBar from "./sidebar";
-import { robotoMono } from "@/app/layout"
+import { robotoMono } from "./fonts";
 import Link from "next/link"
 import Image from "next/image";
 import { linkButtonClass, linkButtonIconClass } from "./classes";
