@@ -1,5 +1,58 @@
 .clock {
     color: #fff;
-    text-shadow: 0px 0px 90px rgba(0, 0, 0, 0.4);
-    width: 4em;
+    text-shadow: 0px 0px 70px rgba(0, 0, 0, 1);
+    pointer-events: none;
+    user-select: none;
+    font-size: 10lvw;
+    transition: font-size ease 1s;
+}
+
+.date {
+    color: #eee;
+    text-shadow: 0px 0px 60px rgba(0, 0, 0, 1);
+    pointer-events: none;
+    user-select: none;
+    font-size: 6lvw;
+    transition: font-size ease 1s;
+}
+
+.clockNdate {
+    display: grid;
+    place-items: center;
+}
+
+.holder {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.localeButton {
+    opacity: .5;
+    background-color: #aaa;
+    padding: 4px;
+    border-radius: 100%;
+    border: 1px solid #a2a2a2;
+    transition: opacity ease 1s, scale ease 500ms;
+    user-select: none;
+}
+
+.localeButton:hover {
+    opacity: 1;
+    scale: 108%;
+}
+
+.localeButton:active {
+    opacity: 1;
+    scale: 98%;
+}
+
+@media (min-width: 784px) {
+    .clock {
+        font-size: 8lvw;
+    }
+
+    .date {
+        font-size: 4lvw;
+    }
 }
