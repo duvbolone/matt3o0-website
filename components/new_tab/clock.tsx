@@ -63,14 +63,14 @@ function Clock() {
         setCookieState("newTabFormatLength", !formatLength);
     }
 
-    return (<div className={jetbrains.className + ' ' + styles.holder}>
+    return (<div className={jetbrains.className + ' ' + styles.holder} id="clock">
         <div className={styles.clockNdate}>
             <p className={styles.clock}>{formattedTime}</p>
             <p className={styles.date}>{formattedDate}</p>
         </div>
         <div style={{ height: '20vh' }}></div>
         <Shortcuts></Shortcuts>
-        <div style={{ display: 'flex', gap: '8px', margin: '4em' }}>
+        <div style={{ display: 'flex', gap: '8px', margin: '4em' }} id='buttons'>
             <button onClick={changeLocale} className={styles.localeButton}>
                 <Image src="/icons/language.svg" alt="Language" width="128" height="128" className="h-7 w-7" />
             </button>

@@ -73,6 +73,18 @@ function Shortcuts() {
         }
         , []);
 
+
+    function closeForm() {
+        setIsAdding(false);
+        setNewShortcutURLMessage("");
+        let shortcutE = document.getElementById('newShortcut')
+        let clock = document.getElementById('clock');
+        let buttons = document.getElementById('buttons')
+        if (shortcutE && buttons && clock) {
+            clock.insertBefore(shortcutE, buttons);
+        }
+    }
+
     async function handleAdd(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
@@ -93,15 +105,20 @@ function Shortcuts() {
 
                 let shortcut = { url: url, name: name.slice(0, 12), id: generateUUID() };
                 addShortcut(shortcut);
-                setIsAdding(false);
-                setNewShortcutURLMessage("");
+                closeForm();
             }
         }
 
     }
 
     if (isAdding) {
-        return <div className={styles.formHolder + ' ' + inter.className}>
+
+        let shortcut = document.getElementById('newShortcut')
+        if (shortcut && document.body.firstChild !== shortcut) {
+            document.body.insertBefore(shortcut, document.body.firstChild);
+        }
+
+        return <div className={styles.formHolder + ' ' + inter.className} id="newShortcut">
             <form className={styles.form} onSubmit={handleAdd}>
                 <h1 className={styles.header}>Add New Shortcut</h1>
                 <div className={styles.inputGroup}>
@@ -116,10 +133,10 @@ function Shortcuts() {
                 </div>
                 <div className={styles.bottomButtons}>
                     <button className={styles.addButton} type="submit">Add</button>
-                    <button className={styles.cancelButton} onClick={() => { setIsAdding(false); setNewShortcutURLMessage(""); }}>Cancel</button>
+                    <button className={styles.cancelButton} onClick={closeForm}>Cancel</button>
                 </div>
-            </form>
-        </div>
+            </form >
+        </div >
     } else {
         let shortcuts_items = shortcuts.map((item) => (<ShortcutItem item={item}></ShortcutItem>));
         return <div className={styles.hold + ' ' + inter.className}>{shortcuts_items}<button className={styles.item} onClick={() => { setIsAdding(true) }} title="Add new shorcut"><div className={styles.iconBg}><Image src="/icons/add.svg" alt="Add new shortcut" width="32" height="32" className={styles.icon} /></div><p>Add New</p></button></div>
