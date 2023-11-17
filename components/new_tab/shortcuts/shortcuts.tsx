@@ -76,24 +76,28 @@ function Shortcuts() {
     async function handleAdd(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
-        let name = document.getElementById("newShortcutName");
-        let url = document.getElementById("newShortcutURL");
+        let nameElement = document.getElementById("newShortcutName") as HTMLInputElement | null;
+        let urlElement = document.getElementById("newShortcutURL") as HTMLInputElement | null;
 
-        if (url && name) {
-            if (url.value && name.value) {
+        if (urlElement && nameElement) {
+            let name = nameElement.value;
+            let url = urlElement.value;
+
+            if (url && name) {
                 try {
-                    new URL(url.value);
+                    new URL(url);
                 } catch {
                     setNewShortcutURLMessage("Invalid URL provided!");
-                    return
+                    return;
                 }
 
-                let shortcut = { url: url.value, name: name.value.slice(0, 12), id: generateUUID() };
+                let shortcut = { url: url, name: name.slice(0, 12), id: generateUUID() };
                 addShortcut(shortcut);
                 setIsAdding(false);
                 setNewShortcutURLMessage("");
             }
         }
+
     }
 
     if (isAdding) {
