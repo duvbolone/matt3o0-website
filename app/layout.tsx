@@ -6,10 +6,6 @@ import Popup from '@/components/privacy_popup';
 import { Analytics } from '@vercel/analytics/react';
 import { inter } from '@/components/fonts';
 
-export function getFavicon(url: string, size: number) {
-    return `https://www.google.com/s2/favicons?domain=${new URL(url).origin}&sz=${size}`
-}
-
 export default function RootLayout({
     children,
 }: {

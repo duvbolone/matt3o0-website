@@ -24,15 +24,14 @@
 .holder {
     display: grid;
     place-items: center;
-    height: 100%;
 }
 
 .localeButton {
-    opacity: .5;
-    background-color: #aaa;
+    opacity: .7;
     padding: 4px;
     border-radius: 100%;
-    border: 1px solid #a2a2a2;
+    box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px), brightness(80%);
     transition: opacity ease 1s, scale ease 500ms;
     user-select: none;
 }

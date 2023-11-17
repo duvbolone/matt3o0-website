@@ -27,6 +27,8 @@ function NewTab() {
     }
 
     useEffect(() => {
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
         const updateImage = async () => {
             const randomImageUrl = getRandomImageUrl();
             let backgroundElement = document.getElementById("clockHolder");
@@ -37,7 +39,9 @@ function NewTab() {
                 holderElement.style.filter = "brightness(75%)";
             }
 
-            await sleep(5000);
+            if (!isSafari) {
+                await sleep(5000);
+            }
             setBackgroundImageUrl(randomImageUrl);
 
             if (backgroundElement && holderElement) {
@@ -47,9 +51,11 @@ function NewTab() {
         };
 
         updateImage();
-        const intervalId = setInterval(updateImage, 10000);
+        if (!isSafari) {
+            const intervalId = setInterval(updateImage, 10000);
 
-        return () => clearInterval(intervalId);
+            return () => clearInterval(intervalId);
+        }
     }, []);
 
     return (

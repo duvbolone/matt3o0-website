@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonClass, faviconPreviews, faviconPreviewsLG, linkButtonClass, linkClass } from "@/components/classes";
-import { getFavicon } from "../app/layout";
+import { getFavicon } from "./link";
 import { inter, rubik } from "./fonts";
 
 const SideBar = () => {

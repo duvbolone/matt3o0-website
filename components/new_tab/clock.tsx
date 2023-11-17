@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import styles from "./clock.module.css";
 import { getCookie, setCookie } from 'cookies-next';
-import { jetbrains } from "./fonts";
+import { jetbrains } from "../fonts";
 import Image from "next/image";
+import Shortcuts from "./shortcuts/shortcuts";
 
 function getCookieState(name: string): boolean {
     const cookie = getCookie(name);
@@ -67,7 +68,9 @@ function Clock() {
             <p className={styles.clock}>{formattedTime}</p>
             <p className={styles.date}>{formattedDate}</p>
         </div>
-        <div style={{ display: 'flex', gap: '8px' }}>
+        <div style={{ height: '20vh' }}></div>
+        <Shortcuts></Shortcuts>
+        <div style={{ display: 'flex', gap: '8px', margin: '4em' }}>
             <button onClick={changeLocale} className={styles.localeButton}>
                 <Image src="/icons/language.svg" alt="Language" width="128" height="128" className="h-7 w-7" />
             </button>

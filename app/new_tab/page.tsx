@@ -1,4 +1,4 @@
-import NewTab from "@/components/new_tab";
+import NewTab from "@/components/new_tab/new_tab";
 
 export const metadata = {
     title: 'New Tab - Matt3o0‘s website',
@@ -7,6 +7,6 @@ export const metadata = {
 
 export default function NewTabPage() {
     return (
-        <NewTab></NewTab>
+        <div><NewTab></NewTab></div>
     )
 }

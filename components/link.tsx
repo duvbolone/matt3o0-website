@@ -1,6 +1,9 @@
 import Image from "next/image";
-import { getFavicon } from "@/app/layout";
 import { faviconPreviews, linkClass } from "./classes";
+
+export function getFavicon(url: string, size: number) {
+    return `https://www.google.com/s2/favicons?domain=${new URL(url).origin}&sz=${size}`
+}
 
 function IconLink({ url, title, size }: { url: string; title?: string | null, size?: number }) {
     const link_title = title || new URL(url).hostname;
