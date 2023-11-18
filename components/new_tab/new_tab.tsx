@@ -8,7 +8,8 @@ const imageUrls = [
     'https://source.unsplash.com/oPfWsUmBJV4',
     'https://source.unsplash.com/uOmHK8jVRtU',
     'https://source.unsplash.com/yi25dxeKxEI',
-    'https://source.unsplash.com/PlJlSziIWEw'
+    'https://source.unsplash.com/PlJlSziIWEw',
+    'https://source.unsplash.com/iZaOcRo9Ri4'
 ];
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
