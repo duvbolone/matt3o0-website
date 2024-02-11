@@ -42,3 +42,4 @@ next-env.d.ts
 
 # Matt3o0
 *.mjs
+*.py

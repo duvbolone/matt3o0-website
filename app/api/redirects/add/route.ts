@@ -8,22 +8,22 @@ const dbName = 'matt3o0-website';
 function generateShortID(length: number): string {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const randomBytesCount = Math.ceil((length * 3) / 4);
-  
+
     const randomBytesBuffer = randomBytes(randomBytesCount);
     let shortID = '';
-  
+
     for (let i = 0; i < randomBytesCount; i++) {
-      const randomValue = randomBytesBuffer.readUInt8(i);
-      shortID += charset[randomValue % charset.length];
+        const randomValue = randomBytesBuffer.readUInt8(i);
+        shortID += charset[randomValue % charset.length];
     }
-  
+
     return shortID;
-  }
+}
 
 async function redirectIDExists(collection: any, redirectId: string): Promise<boolean> {
     const query = { redirect_id: redirectId };
     const result = await collection.find(query).toArray();
-    
+
     if (result[0]) {
         if (result[0].redirect_id === redirectId) {
             return true;
@@ -37,77 +37,78 @@ async function redirectIDExists(collection: any, redirectId: string): Promise<bo
 
 function isValidURL(url: string): boolean {
     try {
-      new URL(url);
-      return true;
+        new URL(url);
+        return true;
     } catch (error) {
-      return false;
+        return false;
     }
-  }
+}
 
 export async function POST(request: NextRequest) {
     const host = `http://${request.headers.get('host')}`
-    const requestBody = await request.json();
-
-    if (requestBody && requestBody.token != process.env.UPDATE_TOKEN) {
-        return new NextResponse(JSON.stringify({
-            status: 401,
-            message: 'Invalid token.',
-            link: null,
-        }), {
-            status: 401,
-            headers: { 'Content-Type': 'application/json' },
-        });
-    }
-
     let client;
-    if (!mongo_url) {
-        return new NextResponse(JSON.stringify({
-            status: 500,
-            message: 'MongoDB error.',
-            link: null,
-        }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
-    }
 
-    let insertResult;
-    let redirectId = 'none';
+    try {
+        const requestBody = await request.json();
 
-    if (!requestBody.url) {
-        return new NextResponse(JSON.stringify({
-            status: 400,
-            message: 'No URL specified.',
-            link: null,
-        }), {
-            status: 400,
-            headers: { 'Content-Type': 'application/json' },
-        });
-    } else {
-        if (!isValidURL(requestBody.url)) {
+        if (requestBody && requestBody.token != process.env.UPDATE_TOKEN) {
+            return new NextResponse(JSON.stringify({
+                status: 401,
+                message: 'Invalid token.',
+                link: null,
+            }), {
+                status: 401,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        }
+
+        if (!mongo_url) {
+            return new NextResponse(JSON.stringify({
+                status: 500,
+                message: 'MongoDB error.',
+                link: null,
+            }), {
+                status: 500,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        }
+
+        let insertResult;
+        let redirectId = 'none';
+
+        if (!requestBody.url) {
             return new NextResponse(JSON.stringify({
                 status: 400,
-                message: 'Invalid URL specified.',
+                message: 'No URL specified.',
+                link: null,
+            }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        } else {
+            if (!isValidURL(requestBody.url)) {
+                return new NextResponse(JSON.stringify({
+                    status: 400,
+                    message: 'Invalid URL specified.',
+                    link: null,
+                }), {
+                    status: 400,
+                    headers: { 'Content-Type': 'application/json' },
+                });
+            }
+        }
+
+        if (!requestBody.stops_on) {
+            return new NextResponse(JSON.stringify({
+                status: 400,
+                message: 'No value for stops_on specified.',
                 link: null,
             }), {
                 status: 400,
                 headers: { 'Content-Type': 'application/json' },
             });
         }
-    }
 
-    if (!requestBody.stops_on) {
-        return new NextResponse(JSON.stringify({
-            status: 400,
-            message: 'No value for stops_on specified.',
-            link: null,
-        }), {
-            status: 400,
-            headers: { 'Content-Type': 'application/json' },
-        });
-    }
-
-    try {
         client = new MongoClient(mongo_url);
         await client.connect();
 
@@ -116,7 +117,7 @@ export async function POST(request: NextRequest) {
 
         if (collection) {
             if (!requestBody.redirect_id) {
-                if (typeof(requestBody.redirect_id_length) === 'number') {
+                if (typeof (requestBody.redirect_id_length) === 'number') {
                     let status = true;
                     while (status) {
                         redirectId = generateShortID(requestBody.redirect_id_length);
@@ -148,7 +149,8 @@ export async function POST(request: NextRequest) {
             await collection.insertOne({
                 redirect_id: redirectId,
                 url: requestBody.url,
-                stops_on: requestBody.stops_on
+                stops_on: requestBody.stops_on,
+                hidden: requestBody.hidden ?? false
             });
             insertResult = `Redirect to '${requestBody.url}' addded with ID '${redirectId}'`
         } else {

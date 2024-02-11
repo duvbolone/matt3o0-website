@@ -34,10 +34,10 @@ export async function GET(request: NextRequest) {
 
         const db = client.db(dbName);
         const collection = db.collection("redirects");
-          
-        const result = await collection.find().toArray();
 
-        const response =  new NextResponse(JSON.stringify({
+        const result = await collection.find({ "hidden": false }).toArray();
+
+        const response = new NextResponse(JSON.stringify({
             status: 200,
             message: "Success!",
             result: result,
