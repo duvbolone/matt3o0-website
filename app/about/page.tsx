@@ -21,9 +21,9 @@ export default function About() {
                     My birthday: <strong className="text-slate-400">20th of May</strong>
                 </p>
             </div>
-            <h2 className={h2Class}>Biography</h2>
+            <h2 className={h2Class}>Me</h2>
             <div className={infoBoxClass}>
-                I live in Belgium, speak English, Dutch, Italian(I'm half Italian) and a bit of French.
+                I live in Belgium, speak English, Dutch, Italian (I'm half Italian) and a bit of French.
                 When I game it's usually X-Plane, Minecraft, ETS2 or Universe Sandbox.
                 I'm interested in quite a bit of subjects too, like:
                 <ul className="px-8 list-disc">
@@ -33,8 +33,6 @@ export default function About() {
                     <li>🗣️ Languages</li>
                     <li>💻 Everything computers</li>
                 </ul>
-
-                More on the 'Everything computers' part: I like coding, and use Python, C++ and JavaScript. Lua is a prominent contributor to my coding time too.
             </div>
             <h2 id="website" className={h2Class}>Website Information</h2>
             <div className={infoBoxClass}>
