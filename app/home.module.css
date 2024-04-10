@@ -1,0 +1,55 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-width: 100vw;
+}
+
+.typingTextHolder {
+    min-height: 2em;
+    color: #999;
+    font-size: 4em;
+    text-align: right;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-right: 10em;
+
+    width: max-content;
+}
+
+.typingText {
+    color: #333;
+    text-align: left;
+}
+
+.cards {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    max-width: 50vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    .typingTextHolder {
+        margin-right: none;
+        font-size: 3em;
+    }
+
+    .cards {
+        max-width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .typingTextHolder {
+        margin-right: none;
+        font-size: 2.5em;
+    }
+
+    .cards {
+        max-width: 90vw;
+    }
+}

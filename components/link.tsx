@@ -18,4 +18,11 @@ function IconLink({ url, title, size }: { url: string; title?: string | null, si
     );
 }
 
+export function MaskedLink({ url, title }: { url: string; title?: string | null }) {
+    const link_title = title || new URL(url).hostname;
+    return (<a href={url} target="_blank" className={linkClass}>
+        <strong>{link_title}</strong>
+    </a>)
+}
+
 export default IconLink;

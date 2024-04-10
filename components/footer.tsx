@@ -11,8 +11,6 @@ export default function Footer() {
             <ul className="p-3 text-slate-500rounded-lg">
                 <h1 className={robotoMono.className + " py-2 text-2xl text-slate-300"}>Pages</h1>
                 <li><Link href="/" className={linkClass}>Home</Link></li>
-                <li><Link href="/about" className={linkClass}>About</Link></li>
-                <li><Link href="/projects" className={linkClass}>Projects</Link></li>
                 <li><Link href="/privacy" className={linkClass}>Privacy</Link></li>
                 <li><Link href="/redirects" className={linkClass}>Redirects</Link></li>
                 <li><Link href="/new_tab" className={linkClass}>New Tab Project</Link></li>
@@ -22,10 +20,11 @@ export default function Footer() {
                 <li><a href="https://github.com/duvbolone" target="_blank" className={linkClass}>GitHub</a></li>
                 <li><a href="https://discord.com/users/668874138160594985" target="_blank" className={linkClass}>Discord</a></li>
                 <li><a href="https://twitter.com/Matt3o044" target="_blank" className={linkClass}>Twitter</a></li>
+                <li><a href="https://steamcommunity.com/profiles/76561199103441618" target="_blank" className={linkClass}>Steam</a></li>
             </ul>
             <div className="flex">
                 <p className="max-w-lg text-xs text-neutral-500 dark:text-neutral-800 self-end">
-                    © 2023 Matt3o0. This website's source code is licensed under the <strong><a href="https://mit-license.org/" target="_blank">MIT License</a></strong>.
+                    © 2024 Matt3o0. This website's source code is licensed under the <strong><a href="https://mit-license.org/" target="_blank">MIT License</a></strong>.
                 </p>
             </div>
         </footer>

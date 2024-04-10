@@ -13,12 +13,6 @@ export default function NavBar() {
                 <h1 className="py-2 text-4xl text-m27v2 dark:text-m27v3">Matt3o0</h1>
             </Link>
             <div className="px-10 space-x-4 hidden text-2xl right-0 absolute top-10 lg:flex">
-                <Link href="/about">
-                    <button className={linkButtonClass} title="About" type="button">about</button>
-                </Link>
-                <Link href="/projects">
-                    <button className={linkButtonClass} title="Projects" type="button">projects</button>
-                </Link>
                 <div className="space-x-2">
                     <a href="https://github.com/duvbolone" target="_blank">
                         <button className={linkButtonIconClass} title="GitHub account" type="button">

@@ -26,13 +26,13 @@ export default function RootLayout({
             </html>
         )
     } else {
-
         return (
             <html lang="en" className="bg-white dark:bg-black scroll-smooth">
                 <head>
                     <meta charSet='utf-8'></meta>
                     <meta property="og:image" content="/M27.png"></meta>
                     <meta name="theme-color" content="#FFFFFF dark:#050505"></meta>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
                 </head>
                 <body className={inter.className + " bg-gradient-to-t from-m27v3 to-white dark:bg-gradient-to-t dark:from-m27v2-600 dark:to-black text-m27v2 dark:text-slate-400 h-100%"}>
                     <NavBar />
