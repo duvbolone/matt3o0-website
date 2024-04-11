@@ -37,12 +37,6 @@ const SideBar = () => {
                         X
                     </button>
                     <div className="py-10 space-y-2 text-4xl flex flex-col">
-                        <Link href="/about" onClick={handleClickBar}>
-                            About
-                        </Link>
-                        <Link href="/projects" onClick={handleClickBar}>
-                            Projects
-                        </Link>
                         <div className="h-10"></div>
                         <div className="-space-y-4" onClick={handleClickBar}>
                             <a href="https://github.com/duvbolone" target="_blank" className={`${linkClass} py-3 block`}><Image src={getFavicon("https://github.com", 128)} width="128" height="128" alt="GitHub logo" className={faviconPreviewsLG} /> <strong>GitHub</strong></a>

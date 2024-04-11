@@ -24,6 +24,15 @@
     text-align: left;
 }
 
+.heart {
+    transition: text-shadow 0.5s ease-out, scale 150ms ease;
+}
+
+.heart:hover {
+    text-shadow: 0px 0px 14px #cc2233ee;
+    animation: beating-heart 1s linear infinite;
+}
+
 .cards {
     margin-top: 4vh;
     display: flex;
@@ -32,9 +41,36 @@
     max-width: 50vw;
 }
 
+@keyframes beating-heart {
+
+    0%,
+    50%,
+    100% {
+        font-size: 100%;
+    }
+
+    40% {
+        font-size: 101%;
+    }
+
+    60% {
+        font-size: 101%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .typingTextHolder {
+        color: #333;
+    }
+
+    .typingText {
+        color: #999;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .typingTextHolder {
-        margin-right: none;
+        margin-right: 3em;
         font-size: 3em;
     }
 
@@ -45,7 +81,7 @@
 
 @media only screen and (max-width: 800px) {
     .typingTextHolder {
-        margin-right: none;
+        margin-right: 3em;
         font-size: 2.5em;
     }
 

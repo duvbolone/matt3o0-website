@@ -9,3 +9,13 @@
 .controller:hover {
     color: #999;
 }
+
+@media (prefers-color-scheme: dark) {
+    .controller {
+        color: #252525;
+    }
+
+    .controller:hover {
+        color: #555;
+    }
+}

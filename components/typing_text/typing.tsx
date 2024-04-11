@@ -6,7 +6,7 @@ export interface TypingTextProps {
     speed: number
 }
 
-function getRandomElement(texts: Array<string>, avoid: string | undefined = undefined) {
+function getRandomElement(texts: Array<string>, avoid: string | undefined = undefined): string {
     const len = texts.length;
 
     let newText = texts[Math.min((len - 1), Math.max(0, Math.floor(Math.random() * len)))];

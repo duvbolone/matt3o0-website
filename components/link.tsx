@@ -11,7 +11,7 @@ function IconLink({ url, title, size }: { url: string; title?: string | null, si
     const icon_size = size || 64;
 
     return (
-        <a href={url} target="_blank" className={linkClass}>
+        <a href={url} target="_blank" style={{ border: "none" }} className={linkClass}>
             <Image src={getFavicon(url, icon_size)} width={icon_size} height={icon_size} alt={`${link_title} logo`} className={faviconPreviews} />
             <strong>{link_title}</strong>
         </a>
