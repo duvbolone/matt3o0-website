@@ -1,0 +1,45 @@
+.main {
+    display: grid;
+    place-items: center;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.ip {
+    font-size: 6vw;
+    --angle: 0deg;
+    background: linear-gradient(var(--angle), #697, #679);
+    background-clip: text;
+    color: transparent;
+
+    animation: rotating-colors 10s ease-out infinite;
+}
+
+.clipboard {
+    color: #aba;
+    transition: color 250ms ease;
+}
+
+.clipboard:hover {
+    color: #9a9;
+}
+
+@keyframes rotating-colors {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 359deg;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ip {
+        background: linear-gradient(var(--angle), #336644, #334466);
+    }
+}

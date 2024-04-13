@@ -1,0 +1,32 @@
+.icon_vanish {
+    animation: vanish 1.5s ease;
+}
+
+.icon_vanish_fast {
+    animation: vanish 750ms ease;
+    rotate: 720deg;
+}
+
+@keyframes vanish {
+
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        rotate: 360deg;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
