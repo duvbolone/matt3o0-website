@@ -1,5 +1,5 @@
 //@ts-nocheck
-import SideBar from "./sidebar";
+import SideBar from "./sidebar/sidebar";
 import { robotoMono } from "./fonts";
 import Link from "next/link"
 import Image from "next/image";

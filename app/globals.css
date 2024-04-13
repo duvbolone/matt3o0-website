@@ -8,6 +8,10 @@
     --shake-lg-sizem: -20px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @keyframes shake {
     0% {
         transform: translateX(0);
@@ -197,4 +201,8 @@
 
 .paragraph {
     color: #666;
+}
+
+.noscroll {
+    overflow: hidden;
 }

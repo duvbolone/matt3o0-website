@@ -1,0 +1,42 @@
+.hidden {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.sidebar {
+    top: 0.2em;
+    bottom: 0.2em;
+    position: fixed;
+    transition: transform 500ms ease-out;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px) brightness(70%);
+    width: 100vw;
+    height: 100dvh;
+    padding: 2em;
+    border-radius: 2em 0 0 2em;
+    border: 2px solid #aaa;
+    box-shadow: -2px 0px 8px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 1em;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: xx-large;
+}
+
+.close {
+    font-size: large;
+    font-weight: bold;
+    scale: 190%;
+    color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sidebar {
+        background-color: rgba(5, 7, 5, 0.75);
+        border-color: rgb(7, 9, 7);
+    }
+}
