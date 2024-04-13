@@ -13,6 +13,7 @@ export default function Footer() {
                 <li><Link href="/" className={linkClass}>Home</Link></li>
                 <li><Link href="/privacy" className={linkClass}>Privacy</Link></li>
                 <li><Link href="/redirects" className={linkClass}>Redirects</Link></li>
+                <li><Link href="/ip" className={linkClass}>IP</Link></li>
                 <li><Link href="/new_tab" className={linkClass}>New Tab Project</Link></li>
             </ul>
             <ul className="p-3 text-slate-500rounded-lg">

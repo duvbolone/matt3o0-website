@@ -40,6 +40,15 @@
 
 @media (prefers-color-scheme: dark) {
     .ip {
-        background: linear-gradient(var(--angle), #336644, #334466);
+        background: linear-gradient(var(--angle), #364, #346);
+        background-clip: text;
+    }
+
+    .clipboard {
+        color: #222422;
+    }
+
+    .clipboard:hover {
+        color: #394039;
     }
 }
